@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Project3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project3">
+				<Option output="/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Project3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/users/guest/j/jclar234/CS236/Project3/CLION2/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 Project3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Project3/fast">
+				<Option output="/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Project3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/users/guest/j/jclar234/CS236/Project3/CLION2/."/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 Project3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Automaton.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/CommentAutomaton.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/CommentAutomaton.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Database.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Database.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/DatalogProgram.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/DatalogProgram.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Header.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Header.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/IDAutomaton.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/IDAutomaton.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Interpreter.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Interpreter.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Lexer.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Lexer.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/MatcherAutomaton.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/MatcherAutomaton.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Parameter.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Parameter.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Parser.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Parser.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Predicate.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Predicate.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Relation.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Relation.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Rule.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Rule.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/StringAutomaton.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/StringAutomaton.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Token.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Token.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Tuple.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/Tuple.h">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/main.cpp">
+			<Option target="Project3"/>
+		</Unit>
+		<Unit filename="/users/guest/j/jclar234/CS236/Project3/CLION2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

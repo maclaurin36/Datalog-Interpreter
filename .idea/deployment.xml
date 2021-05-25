@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="Schizo (745a2544-6314-4a5a-954f-0d0b24f8582d)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/users/guest/j/jclar234/CS236/Project3/CLION2" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-schizo" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="Schizo (9d11ac9e-3d38-4e86-84af-80b47a79c67c)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/users/guest/j/jclar234/CS236/Project3/CLION2" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-schizo" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="Schizo (d5a22d79-82a8-45c3-951a-7bc7ba3feab2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/users/guest/j/jclar234/CS236/Project3/CLION2" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-schizo" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
