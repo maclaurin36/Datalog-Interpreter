@@ -16,7 +16,7 @@ public:
     std::string GetValueAtIndex(int index) const;
     bool operator< (const Tuple & other) const;
     int GetSize();
-    int GetSize() const;
+    unsigned int GetSize() const;
     std::string toString() const; // Not required but may be nice;
 };
 

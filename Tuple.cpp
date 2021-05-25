@@ -41,6 +41,6 @@ int Tuple::GetSize() {
     return values.size();
 }
 
-int Tuple::GetSize() const {
+unsigned int Tuple::GetSize() const {
     return values.size();
 }
