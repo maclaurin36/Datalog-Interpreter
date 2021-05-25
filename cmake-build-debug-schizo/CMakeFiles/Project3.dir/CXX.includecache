@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+/users/guest/j/jclar234/CS236/Project3/CLION2/Automaton.h
+Token.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Token.h
+
+/users/guest/j/jclar234/CS236/Project3/CLION2/Database.cpp
+Database.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Database.h
+
 /users/guest/j/jclar234/CS236/Project3/CLION2/Database.h
 map
 -
@@ -46,10 +54,34 @@ iostream
 sstream
 -
 
+/users/guest/j/jclar234/CS236/Project3/CLION2/Lexer.h
+vector
+-
+Automaton.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Automaton.h
+Token.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Token.h
+
 /users/guest/j/jclar234/CS236/Project3/CLION2/Parameter.h
 Token.h
 /users/guest/j/jclar234/CS236/Project3/CLION2/Token.h
 string
+-
+
+/users/guest/j/jclar234/CS236/Project3/CLION2/Parser.h
+Token.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Token.h
+Parameter.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Parameter.h
+Predicate.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Predicate.h
+Rule.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Rule.h
+DatalogProgram.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/DatalogProgram.h
+vector
+-
+iostream
 -
 
 /users/guest/j/jclar234/CS236/Project3/CLION2/Predicate.h
@@ -61,6 +93,10 @@ sstream
 -
 Parameter.h
 /users/guest/j/jclar234/CS236/Project3/CLION2/Parameter.h
+
+/users/guest/j/jclar234/CS236/Project3/CLION2/Relation.cpp
+Relation.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Relation.h
 
 /users/guest/j/jclar234/CS236/Project3/CLION2/Relation.h
 string
@@ -88,5 +124,21 @@ string
 vector
 -
 sstream
+-
+
+/users/guest/j/jclar234/CS236/Project3/CLION2/main.cpp
+Lexer.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Lexer.h
+Parser.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Parser.h
+Interpreter.h
+/users/guest/j/jclar234/CS236/Project3/CLION2/Interpreter.h
+iostream
+-
+fstream
+-
+sstream
+-
+string
 -
 

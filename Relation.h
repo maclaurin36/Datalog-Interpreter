@@ -20,6 +20,7 @@ public:
     void SetName(std::string name);
     std::string GetName();
     void SetHeader(Header* header);
+    Header* GetHeader() const;
     void AddTuple(Tuple newTuple);
     std::set<Tuple>& GetRows();
     std::string toString(); // Not required but may be nice;

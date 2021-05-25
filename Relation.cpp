@@ -113,3 +113,6 @@ Relation::~Relation() {
     }
 }
 
+Header* Relation::GetHeader() const {
+    return header;
+}

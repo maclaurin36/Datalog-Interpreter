@@ -106,8 +106,16 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
         ss << "Yes(" << relation->GetRows().size() << ")";
         for (auto rowIt = relation->GetRows().begin(); rowIt != relation->GetRows().end(); rowIt++) {
             std::set<std::string> variablesPrinted;
-            int numberOfConstants = 0;
-            for (unsigned int i = 0; i < query->getList().size(); i++) {
+            //int numberOfConstants = 0;
+            for (unsigned int i = 0; i < (*rowIt).GetSize(); i++) {
+                if (i == 0) {
+                    ss << "\n  ";
+                } else {
+                    ss << ", ";
+                }
+                ss << relation->GetHeader()->GetAttributeAtIndex(i) << "=" << (*rowIt).GetValueAtIndex(i);
+            }
+            /*for (unsigned int i = 0; i < query->getList().size(); i++) {
                 if (!(query->getList().at(i)->isString())) {
                     if (variablesPrinted.find(query->getList().at(i)->getParameterValue()) == variablesPrinted.end()) {
                         if (i - numberOfConstants == 0) {
@@ -121,7 +129,7 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
                 } else {
                     numberOfConstants++;
                 }
-            }
+            }*/
         }
 
     } else {
