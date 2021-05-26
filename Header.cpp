@@ -32,3 +32,7 @@ std::vector<std::string> &Header::GetAttributes() {
 std::string Header::GetAttributeAtIndex(unsigned int index) {
     return attributes.at(index);
 }
+
+void Header::RemoveAttributeAtIndex(unsigned int index) {
+    attributes.erase(attributes.begin() + index);
+}

@@ -30,14 +30,17 @@ Relation *Relation::Select(int index, std::string value) {
     Relation* newRelation = new Relation(this);
     for (std::set<Tuple>::iterator it = rows.begin(); it != rows.end(); it++) {
         if ((*it).GetValueAtIndex(index) == value) {
+            //Tuple newTuple = (*it);
+            //newTuple.RemoveElementAtIndex(index);
             newRelation->AddTuple((*it));
         }
     }
+    //newRelation->RemoveAttributeFromHeader(index);
     return newRelation;
 }
 
 Relation::Relation() {
-
+    resultOfConstantQuery = true;
 }
 
 Relation::Relation(Relation *copyRelation) {
@@ -115,4 +118,16 @@ Relation::~Relation() {
 
 Header* Relation::GetHeader() const {
     return header;
+}
+
+void Relation::RemoveAttributeFromHeader(unsigned int index) {
+    header->RemoveAttributeAtIndex(index);
+}
+
+void Relation::SetConstantQuery() {
+    resultOfConstantQuery = false;
+}
+
+bool Relation::GetConstantQuery() {
+    return resultOfConstantQuery;
 }

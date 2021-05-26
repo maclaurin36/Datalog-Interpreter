@@ -16,6 +16,7 @@ public:
     std::string toString(); // Not required but may be nice;
     std::vector<std::string>& GetAttributes();
     std::string GetAttributeAtIndex(unsigned int index);
+    void RemoveAttributeAtIndex(unsigned int index);
 };
 
 

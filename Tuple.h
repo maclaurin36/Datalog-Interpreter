@@ -17,6 +17,7 @@ public:
     bool operator< (const Tuple & other) const;
     int GetSize();
     unsigned int GetSize() const;
+    void RemoveElementAtIndex(unsigned int index);
     std::string toString() const; // Not required but may be nice;
 };
 

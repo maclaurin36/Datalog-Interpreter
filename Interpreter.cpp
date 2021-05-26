@@ -69,6 +69,7 @@ Relation *Interpreter::EvaluatePredicate(Predicate &p) {
         if ((*parameterIt)->isString()) {
             returnRelation = returnRelation->Select(i, (*parameterIt)->getParameterValue());
         } else {
+            returnRelation->SetConstantQuery();
             if (mapOfIndices.find((*parameterIt)->toString()) != mapOfIndices.end()) {
                 mapOfIndices.at((*parameterIt)->toString())[1] = i;
             } else {
@@ -91,10 +92,12 @@ Relation *Interpreter::EvaluatePredicate(Predicate &p) {
             returnRelation = returnRelation->Select((*it).second[0],(*it).second[1]);
         }
     }
-    if (listOfIndices.size() > 0) {
+
+    if (listOfNames.size() > 0) {
         returnRelation = returnRelation->Project(&listOfIndices);
         returnRelation = returnRelation->Rename(&listOfNames);
     }
+
 
     return returnRelation;
 }
@@ -104,32 +107,34 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
     ss << query->toString() << " ";
     if (relation->GetRows().size() > 0) {
         ss << "Yes(" << relation->GetRows().size() << ")";
-        for (auto rowIt = relation->GetRows().begin(); rowIt != relation->GetRows().end(); rowIt++) {
-            std::set<std::string> variablesPrinted;
-            //int numberOfConstants = 0;
-            for (unsigned int i = 0; i < (*rowIt).GetSize(); i++) {
-                if (i == 0) {
-                    ss << "\n  ";
-                } else {
-                    ss << ", ";
-                }
-                ss << relation->GetHeader()->GetAttributeAtIndex(i) << "=" << (*rowIt).GetValueAtIndex(i);
-            }
-            /*for (unsigned int i = 0; i < query->getList().size(); i++) {
-                if (!(query->getList().at(i)->isString())) {
-                    if (variablesPrinted.find(query->getList().at(i)->getParameterValue()) == variablesPrinted.end()) {
-                        if (i - numberOfConstants == 0) {
-                            ss << "\n  ";
-                        } else {
-                            ss << ", ";
-                        }
-                        ss << query->getList().at(i)->getParameterValue() << "=" << (*rowIt).GetValueAtIndex(i - numberOfConstants);
-                        variablesPrinted.insert(query->getList().at(i)->getParameterValue());
+        if (relation->GetConstantQuery()) {
+            for (auto rowIt = relation->GetRows().begin(); rowIt != relation->GetRows().end(); rowIt++) {
+                std::set<std::string> variablesPrinted;
+                //int numberOfConstants = 0;
+                for (unsigned int i = 0; i < (*rowIt).GetSize(); i++) {
+                    if (i == 0) {
+                        ss << "\n  ";
+                    } else {
+                        ss << ", ";
                     }
-                } else {
-                    numberOfConstants++;
+                    ss << relation->GetHeader()->GetAttributeAtIndex(i) << "=" << (*rowIt).GetValueAtIndex(i);
                 }
-            }*/
+                /*for (unsigned int i = 0; i < query->getList().size(); i++) {
+                    if (!(query->getList().at(i)->isString())) {
+                        if (variablesPrinted.find(query->getList().at(i)->getParameterValue()) == variablesPrinted.end()) {
+                            if (i - numberOfConstants == 0) {
+                                ss << "\n  ";
+                            } else {
+                                ss << ", ";
+                            }
+                            ss << query->getList().at(i)->getParameterValue() << "=" << (*rowIt).GetValueAtIndex(i - numberOfConstants);
+                            variablesPrinted.insert(query->getList().at(i)->getParameterValue());
+                        }
+                    } else {
+                        numberOfConstants++;
+                    }
+                }*/
+            }
         }
 
     } else {
