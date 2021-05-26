@@ -13,11 +13,11 @@ private:
     std::string name;
     Header* header;
     std::set<Tuple> rows;
-    bool resultOfConstantQuery;
+    bool isConstant;
 public:
     Relation();
+    Relation(Relation *copyRelation);
     ~Relation();
-    Relation(Relation* copyRelation);
     void SetName(std::string name);
     std::string GetName();
     void SetHeader(Header* header);
@@ -27,12 +27,13 @@ public:
     std::set<Tuple>& GetRows();
     std::string toString(); // Not required but may be nice;
     Relation* Select(int index, std::string value); // Relation column and value to select
-    void SetConstantQuery();
-    bool GetConstantQuery();
-    //TODO: Implement the other three operators
-    Relation* Select(int index1, int index2); // Relation columns to select on same values
-    Relation* Project(std::vector<int>* listOfIndices); // Columns to keep and their order
-    Relation* Rename(std::vector<std::string>* listOfAttributes); // Defines the new header
+    void SetNonConstant();
+    bool IsConstant();
+    void Select(Relation*& relation, int index1, int index2); // Relation columns to select on same values
+    Relation *Project(std::vector<int> *listOfIndices); // Columns to keep and their order
+    void Rename(Relation*& relation, std::vector<std::string>* listOfAttributes); // Defines the new header
+    void RemoveTuple(std::set<Tuple>::iterator& it);
+    void RemoveAllTuples();
 };
 
 

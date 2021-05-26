@@ -11,7 +11,7 @@ Interpreter::Interpreter(DatalogProgram* program, Database* database) {
 void Interpreter::Run() {
     // For each scheme create a relation using name and parameter values from the scheme
     for (auto it = program->GetSchemeVector()->begin(); it != program->GetSchemeVector()->end(); it++) {
-        Relation* newRelation = new Relation;
+        Relation* newRelation = new Relation();
         newRelation->SetName((*it)->GetName());
         Header* newHeader = new Header();
         for (auto headerIt = (*it)->getList().begin(); headerIt != (*it)->getList().end(); headerIt++) {
@@ -56,48 +56,55 @@ Interpreter::~Interpreter() {
 }
 
 Relation *Interpreter::EvaluatePredicate(Predicate &p) {
+    /// Create a new relation from the scheme and facts
     Relation* returnRelation = new Relation(database->GetMapElement(p.GetName()));
     for (auto it = database->GetMapElement(p.GetName())->GetRows().begin(); it != database->GetMapElement(p.GetName())->GetRows().end(); it++) {
         returnRelation->AddTuple((*it));
     }
+
     int i = 0;
     std::vector<int> listOfIndices;
     std::vector<std::string> listOfNames;
-    std::set<std::string> setOfNames;
     std::map<std::string, int[2]> mapOfIndices;
     for (auto parameterIt = p.getList().begin(); parameterIt != p.getList().end(); parameterIt++) {
+        /// If the parameter is a string, select on that column
         if ((*parameterIt)->isString()) {
+            Relation* deleteRelation = returnRelation;
             returnRelation = returnRelation->Select(i, (*parameterIt)->getParameterValue());
+            delete deleteRelation;
         } else {
-            returnRelation->SetConstantQuery();
+            /// If there is a variable that is not a string, record it in the relation so that it is printed out
+            returnRelation->SetNonConstant();
+            /// If the variable was already recorded, record this as the second index of selection
             if (mapOfIndices.find((*parameterIt)->toString()) != mapOfIndices.end()) {
                 mapOfIndices.at((*parameterIt)->toString())[1] = i;
             } else {
+                /// This was the first time that the variable was seen, record it
                 listOfIndices.push_back(i);
+                listOfNames.push_back((*parameterIt)->getParameterValue());
                 mapOfIndices[(*parameterIt)->toString()][0] = i;
                 mapOfIndices[(*parameterIt)->toString()][1] = -1;
             }
 
-
-            if (setOfNames.find((*parameterIt)->getParameterValue()) == setOfNames.end()) {
-                listOfNames.push_back((*parameterIt)->getParameterValue());
-            }
-            setOfNames.insert((*parameterIt)->getParameterValue());
-
         }
         i++;
     }
+
+    /// If a variable appeared twice, select on that variable
     for (auto it = mapOfIndices.begin(); it != mapOfIndices.end(); it++) {
         if ((*it).second[1] != -1) {
-            returnRelation = returnRelation->Select((*it).second[0],(*it).second[1]);
+            returnRelation->Select(returnRelation,(*it).second[0],(*it).second[1]);
         }
     }
 
+    /// Project and rename if there are variables
     if (listOfNames.size() > 0) {
+        Relation* deleteRelation;
+        deleteRelation = returnRelation;
         returnRelation = returnRelation->Project(&listOfIndices);
-        returnRelation = returnRelation->Rename(&listOfNames);
+        delete deleteRelation;
+        returnRelation->Rename(returnRelation, &listOfNames);
     }
-
 
     return returnRelation;
 }
@@ -107,10 +114,8 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
     ss << query->toString() << " ";
     if (relation->GetRows().size() > 0) {
         ss << "Yes(" << relation->GetRows().size() << ")";
-        if (relation->GetConstantQuery()) {
+        if (relation->IsConstant()) {
             for (auto rowIt = relation->GetRows().begin(); rowIt != relation->GetRows().end(); rowIt++) {
-                std::set<std::string> variablesPrinted;
-                //int numberOfConstants = 0;
                 for (unsigned int i = 0; i < (*rowIt).GetSize(); i++) {
                     if (i == 0) {
                         ss << "\n  ";
@@ -119,21 +124,6 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
                     }
                     ss << relation->GetHeader()->GetAttributeAtIndex(i) << "=" << (*rowIt).GetValueAtIndex(i);
                 }
-                /*for (unsigned int i = 0; i < query->getList().size(); i++) {
-                    if (!(query->getList().at(i)->isString())) {
-                        if (variablesPrinted.find(query->getList().at(i)->getParameterValue()) == variablesPrinted.end()) {
-                            if (i - numberOfConstants == 0) {
-                                ss << "\n  ";
-                            } else {
-                                ss << ", ";
-                            }
-                            ss << query->getList().at(i)->getParameterValue() << "=" << (*rowIt).GetValueAtIndex(i - numberOfConstants);
-                            variablesPrinted.insert(query->getList().at(i)->getParameterValue());
-                        }
-                    } else {
-                        numberOfConstants++;
-                    }
-                }*/
             }
         }
 

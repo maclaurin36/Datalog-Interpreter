@@ -9,6 +9,9 @@ void Relation::SetName(std::string name) {
 }
 
 void Relation::SetHeader(Header *header) {
+    if (this->header != nullptr) {
+        delete this->header;
+    }
     this->header = header;
 }
 
@@ -40,21 +43,8 @@ Relation *Relation::Select(int index, std::string value) {
 }
 
 Relation::Relation() {
-    resultOfConstantQuery = true;
-}
-
-Relation::Relation(Relation *copyRelation) {
-    SetName(copyRelation->GetName());
-    std::vector<std::string> oldHeader = copyRelation->header->GetAttributes();
-    Header* newHeader = new Header();
-    for (unsigned int i = 0; i < oldHeader.size(); i++) {
-        newHeader->AddAttribute(oldHeader.at(i));
-    }
-    SetHeader(newHeader);
-    /*std::set<Tuple> oldRows = copyRelation->GetRows();
-    for (std::set<Tuple>::iterator it = oldRows.begin(); it != oldRows.end(); it++) {
-        AddTuple((*it));
-    }*/
+    isConstant = true;
+    header = nullptr;
 }
 
 std::set<Tuple> &Relation::GetRows() {
@@ -65,14 +55,12 @@ std::string Relation::GetName() {
     return name;
 }
 
-Relation *Relation::Select(int index1, int index2) {
-    Relation* newRelation = new Relation(this);
+void Relation::Select(Relation*& relation, int index1, int index2) {
     for (std::set<Tuple>::iterator it = rows.begin(); it != rows.end(); it++) {
-        if ((*it).GetValueAtIndex(index1) == (*it).GetValueAtIndex(index2)) {
-            newRelation->AddTuple((*it));
+        if ((*it).GetValueAtIndex(index1) != (*it).GetValueAtIndex(index2)) {
+            relation->RemoveTuple(it);
         }
     }
-    return newRelation;
 }
 
 Relation *Relation::Project(std::vector<int> *listOfIndices) {
@@ -96,18 +84,12 @@ Relation *Relation::Project(std::vector<int> *listOfIndices) {
     return newRelation;
 }
 
-Relation *Relation::Rename(std::vector<std::string> *listOfAttributes) {
-    Relation* newRelation = new Relation();
-    newRelation->SetName(name);
+void Relation::Rename(Relation*& relation, std::vector<std::string> *listOfAttributes) {
     Header* newHeader = new Header();
     for (unsigned int i = 0; i < listOfAttributes->size(); i++) {
         newHeader->AddAttribute(listOfAttributes->at(i));
     }
-    newRelation->SetHeader(newHeader);
-    for (std::set<Tuple>::iterator it = rows.begin(); it != rows.end(); it++) {
-        newRelation->AddTuple(*it);
-    }
-    return newRelation;
+    relation->SetHeader(newHeader);
 }
 
 Relation::~Relation() {
@@ -124,10 +106,33 @@ void Relation::RemoveAttributeFromHeader(unsigned int index) {
     header->RemoveAttributeAtIndex(index);
 }
 
-void Relation::SetConstantQuery() {
-    resultOfConstantQuery = false;
+void Relation::SetNonConstant() {
+    isConstant = false;
 }
 
-bool Relation::GetConstantQuery() {
-    return resultOfConstantQuery;
+bool Relation::IsConstant() {
+    return isConstant;
+}
+
+void Relation::RemoveTuple(std::set<Tuple>::iterator& it) {
+    it = rows.erase(it);
+}
+
+void Relation::RemoveAllTuples() {
+    rows.clear();
+}
+
+Relation::Relation(Relation *copyRelation) {
+    header = nullptr;
+    SetName(copyRelation->GetName());
+    std::vector<std::string> oldHeader = copyRelation->header->GetAttributes();
+    Header* newHeader = new Header();
+    for (unsigned int i = 0; i < oldHeader.size(); i++) {
+        newHeader->AddAttribute(oldHeader.at(i));
+    }
+    SetHeader(newHeader);
+    /*std::set<Tuple> oldRows = copyRelation->GetRows();
+    for (std::set<Tuple>::iterator it = oldRows.begin(); it != oldRows.end(); it++) {
+        AddTuple((*it));
+    }*/
 }
