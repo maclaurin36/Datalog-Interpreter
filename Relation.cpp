@@ -33,12 +33,12 @@ Relation *Relation::Select(int index, std::string value) {
     Relation* newRelation = new Relation(this);
     for (std::set<Tuple>::iterator it = rows.begin(); it != rows.end(); it++) {
         if ((*it).GetValueAtIndex(index) == value) {
-            //Tuple newTuple = (*it);
-            //newTuple.RemoveElementAtIndex(index);
             newRelation->AddTuple((*it));
         }
     }
-    //newRelation->RemoveAttributeFromHeader(index);
+    if (!isConstant) {
+        newRelation->SetNonConstant();
+    }
     return newRelation;
 }
 
@@ -62,6 +62,9 @@ Relation *Relation::Select(int index1, int index2) {
             newRelation->AddTuple((*it));
         }
     }
+    if (!isConstant) {
+        newRelation->SetNonConstant();
+    }
     return newRelation;
 }
 
@@ -82,6 +85,9 @@ Relation *Relation::Project(std::vector<int> *listOfIndices) {
             newRelation->AddTuple(newTuple);
         }
 
+    }
+    if (!isConstant) {
+        newRelation->SetNonConstant();
     }
     return newRelation;
 }
@@ -121,8 +127,5 @@ Relation::Relation(Relation *copyRelation) {
         newHeader->AddAttribute(oldHeader.at(i));
     }
     SetHeader(newHeader);
-    /*std::set<Tuple> oldRows = copyRelation->GetRows();
-    for (std::set<Tuple>::iterator it = oldRows.begin(); it != oldRows.end(); it++) {
-        AddTuple((*it));
-    }*/
+    isConstant = copyRelation->IsConstant();
 }

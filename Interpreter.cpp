@@ -117,7 +117,7 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
     ss << query->toString() << " ";
     if (relation->GetRows().size() > 0) {
         ss << "Yes(" << relation->GetRows().size() << ")";
-        if (relation->IsConstant()) {
+        if (!(relation->IsConstant())) {
             for (auto rowIt = relation->GetRows().begin(); rowIt != relation->GetRows().end(); rowIt++) {
                 for (unsigned int i = 0; i < (*rowIt).GetSize(); i++) {
                     if (i == 0) {
