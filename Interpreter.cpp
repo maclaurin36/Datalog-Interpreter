@@ -93,7 +93,9 @@ Relation *Interpreter::EvaluatePredicate(Predicate &p) {
     /// If a variable appeared twice, select on that variable
     for (auto it = mapOfIndices.begin(); it != mapOfIndices.end(); it++) {
         if ((*it).second[1] != -1) {
-            returnRelation->Select(returnRelation,(*it).second[0],(*it).second[1]);
+            Relation* deleteRelation = returnRelation;
+            returnRelation = returnRelation->Select((*it).second[0],(*it).second[1]);
+            delete deleteRelation;
         }
     }
 

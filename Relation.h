@@ -29,7 +29,7 @@ public:
     Relation* Select(int index, std::string value); // Relation column and value to select
     void SetNonConstant();
     bool IsConstant();
-    void Select(Relation*& relation, int index1, int index2); // Relation columns to select on same values
+    Relation* Select(int index1, int index2); // Relation columns to select on same values
     Relation *Project(std::vector<int> *listOfIndices); // Columns to keep and their order
     void Rename(Relation*& relation, std::vector<std::string>* listOfAttributes); // Defines the new header
     void RemoveTuple(std::set<Tuple>::iterator& it);

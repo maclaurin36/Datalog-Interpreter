@@ -55,12 +55,14 @@ std::string Relation::GetName() {
     return name;
 }
 
-void Relation::Select(Relation*& relation, int index1, int index2) {
+Relation *Relation::Select(int index1, int index2) {
+    Relation* newRelation = new Relation(this);
     for (std::set<Tuple>::iterator it = rows.begin(); it != rows.end(); it++) {
-        if ((*it).GetValueAtIndex(index1) != (*it).GetValueAtIndex(index2)) {
-            relation->RemoveTuple(it);
+        if ((*it).GetValueAtIndex(index1) == (*it).GetValueAtIndex(index2)) {
+            newRelation->AddTuple((*it));
         }
     }
+    return newRelation;
 }
 
 Relation *Relation::Project(std::vector<int> *listOfIndices) {
