@@ -44,11 +44,3 @@ int Tuple::GetSize() {
 unsigned int Tuple::GetSize() const {
     return values.size();
 }
-
-void Tuple::RemoveElementAtIndex(unsigned int index) {
-    values.erase(values.begin() + index);
-}
-
-void Tuple::RemoveAllElements() {
-    values.clear();
-}

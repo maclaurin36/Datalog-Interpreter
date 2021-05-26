@@ -104,24 +104,12 @@ Header* Relation::GetHeader() const {
     return header;
 }
 
-void Relation::RemoveAttributeFromHeader(unsigned int index) {
-    header->RemoveAttributeAtIndex(index);
-}
-
 void Relation::SetNonConstant() {
     isConstant = false;
 }
 
 bool Relation::IsConstant() {
     return isConstant;
-}
-
-void Relation::RemoveTuple(std::set<Tuple>::iterator& it) {
-    it = rows.erase(it);
-}
-
-void Relation::RemoveAllTuples() {
-    rows.clear();
 }
 
 Relation::Relation(Relation *copyRelation) {

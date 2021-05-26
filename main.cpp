@@ -38,6 +38,8 @@ int main(int argc, char** argv) {
     delete parser;
     delete lexer;
     delete interpreter;
+    delete program;
+    delete database;
 
     /*Relation* newRelation = new Relation();
     Tuple tuple1;

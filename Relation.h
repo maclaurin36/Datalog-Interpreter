@@ -22,7 +22,6 @@ public:
     std::string GetName();
     void SetHeader(Header* header);
     Header* GetHeader() const;
-    void RemoveAttributeFromHeader(unsigned int index);
     void AddTuple(Tuple newTuple);
     std::set<Tuple>& GetRows();
     std::string toString(); // Not required but may be nice;
@@ -32,8 +31,6 @@ public:
     Relation* Select(int index1, int index2); // Relation columns to select on same values
     Relation *Project(std::vector<int> *listOfIndices); // Columns to keep and their order
     void Rename(Relation*& relation, std::vector<std::string>* listOfAttributes); // Defines the new header
-    void RemoveTuple(std::set<Tuple>::iterator& it);
-    void RemoveAllTuples();
 };
 
 
