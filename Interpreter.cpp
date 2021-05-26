@@ -46,6 +46,7 @@ void Interpreter::Run() {
             ss << "\n";
         }
         ss << QueryResultToString((*it), printRelation);
+        delete printRelation;
     }
     ss << "\n";
     std::cout << ss.str();
