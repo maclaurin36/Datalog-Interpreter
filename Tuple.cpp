@@ -5,14 +5,6 @@
 #include "Tuple.h"
 
 bool Tuple::operator<(const Tuple &other) const {
-    //DONE Compare this Tuple to other tuples for the set.  Sorted alphabetically.
-    /*for (unsigned int i = 0; i < values.size(); i++) {
-        if (values.at(i) < other.values.at(i)) {
-            return true;
-        } else if (other.values.at(i) < values.at(i)) {
-            return false;
-        }
-    }*/
     return values < other.values;
 }
 

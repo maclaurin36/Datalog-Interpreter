@@ -41,38 +41,5 @@ int main(int argc, char** argv) {
     delete program;
     delete database;
 
-    /*Relation* newRelation = new Relation();
-    Tuple tuple1;
-    Tuple tuple2;
-    Tuple tuple3;
-    Header* header = new Header();
-    header->AddAttribute("Attribute1");
-    header->AddAttribute("Attribute2");
-    header->AddAttribute("Attribute3");
-    tuple1.AddElement("b");
-    tuple1.AddElement("a");
-    tuple1.AddElement("a");
-    tuple2.AddElement("c");
-    tuple2.AddElement("d");
-    tuple2.AddElement("d");
-    tuple3.AddElement("g");
-    tuple3.AddElement("h");
-    tuple3.AddElement("i");
-    newRelation->SetName("RelationName");
-    newRelation->SetHeader(header);
-    newRelation->AddTuple(tuple1);
-    newRelation->AddTuple(tuple2);
-    newRelation->AddTuple(tuple3);
-    std::cout << newRelation->toString() << std::endl;
-    std::vector<std::string> someVector;
-    someVector.push_back("New name 1");
-    someVector.push_back("New name 2");
-    someVector.push_back("New name 3");
-    Relation* newRelation2 = newRelation->Rename(&someVector);
-    newRelation2->SetName("otherName");
-    std::cout << newRelation2->toString() << std::endl;
-    Database* newDatabase = new Database;
-    std::cout << std::endl;
-    std::cout << newDatabase->toString();*/
     return 0;
 }

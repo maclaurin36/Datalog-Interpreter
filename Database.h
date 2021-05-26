@@ -9,7 +9,6 @@
 #include <sstream>
 
 class Database {
-    //TODO Implement the map that holds the relations
 private:
     std::map<std::string, Relation*> relationMap;
 public:
