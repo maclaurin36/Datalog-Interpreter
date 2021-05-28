@@ -143,3 +143,57 @@ bool Relation::Union(Relation *incomingRelation) {
     }
     return tupleInserted;
 }
+
+bool Relation::IsJoinable(const Tuple& tuple1, const Tuple& tuple2, const std::vector<int>& listOfJoinIndices) {
+    bool isJoinable = true;
+    for (unsigned int i = 0; i < listOfJoinIndices.size(); i++) {
+        if (tuple1.GetValueAtIndex(listOfJoinIndices.at(i)) != tuple2.GetValueAtIndex(listOfJoinIndices.at(i))) {
+            isJoinable = false;
+        }
+    }
+    return isJoinable;
+}
+
+/// TODO figure out how to combine this with IsJoinable()
+// commonAttributes contains the common attributes in the order (->,parameter), and the Relation's header is common,uncommon->,uncommonParam
+Relation* Relation::JoinHeaderWith(Relation* secondRelation, std::map<int,int>* commonAttributes) {
+    std::vector<std::string> attributes1 = header->GetAttributes();
+    std::vector<std::string> attributes2 = secondRelation->GetHeader()->GetAttributes();
+
+    commonAttributes->clear();
+
+    bool uniqueValue = true;
+    std::set<int> secondRelationUnique;
+    Header* newHeader = new Header();
+
+    for (unsigned int j = 0; j < attributes2.size(); j++) {
+        for (unsigned int i = 0; i < attributes1.size(); i++) {
+            if (attributes1.at(i) == attributes2.at(j)) {
+                newHeader->AddAttribute(attributes1.at(i));
+                commonAttributes->insert(std::pair<int,int>(i,j));
+                uniqueValue = false;
+            }
+        }
+        if (uniqueValue) {
+            secondRelationUnique.insert(j);
+        } else {
+            uniqueValue = true;
+        }
+    }
+
+    for (unsigned int i = 0; i < attributes1.size(); i++) {
+        if (commonAttributes->find(i) == commonAttributes->end()) {
+            newHeader->AddAttribute(attributes1.at(i));
+        }
+    }
+
+    for (unsigned int j = 0; j < attributes2.size(); j++) {
+        if (secondRelationUnique.find(j) != secondRelationUnique.end()) {
+            newHeader->AddAttribute(attributes2.at(j));
+        }
+    }
+    Relation* newRelation = new Relation();
+    newRelation->SetHeader(newHeader);
+
+    return newRelation;
+}

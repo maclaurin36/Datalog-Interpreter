@@ -149,6 +149,20 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
 void Interpreter::Test() {
     Relation* fv = database->GetMapElement("fv");
     Relation* vb = database->GetMapElement("vb");
-    fv->Union(vb);
-    std::cout << fv->toString() << std::endl;
+    Relation* cd = database->GetMapElement("cd");
+    Relation* bfc = database->GetMapElement("bfc");
+    std::map<int,int>* commonAttributes = new std::map<int,int>;
+    Relation* newRelation = fv->JoinHeaderWith(vb, commonAttributes);
+    Relation* newRelation2 = newRelation->JoinHeaderWith(bfc, commonAttributes);
+    std::cout << "Hello";
+    /*
+    std::vector<int> something = {0};
+    for (auto it = fv->GetRows().begin(); it != fv->GetRows().end(); it++) {
+        for (auto it2 = vb->GetRows().begin(); it2 != vb->GetRows().end(); it2++) {
+            if (fv->IsJoinable((*it), (*it2), something)) {
+                std::cout << (*it).toString() << " is joinable with " << (*it2).toString() << std::endl;
+            }
+        }
+    }*/
+
 }

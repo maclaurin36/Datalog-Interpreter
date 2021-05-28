@@ -27,17 +27,7 @@ CMakeFiles/Project3.dir/IDAutomaton.cpp.o: ../IDAutomaton.cpp
 CMakeFiles/Project3.dir/IDAutomaton.cpp.o: ../IDAutomaton.h
 CMakeFiles/Project3.dir/IDAutomaton.cpp.o: ../Token.h
 
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Database.h
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../DatalogProgram.h
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Header.h
 CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Interpreter.cpp
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Interpreter.h
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Parameter.h
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Predicate.h
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Relation.h
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Rule.h
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Token.h
-CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Tuple.h
 
 CMakeFiles/Project3.dir/Lexer.cpp.o: ../Automaton.h
 CMakeFiles/Project3.dir/Lexer.cpp.o: ../CommentAutomaton.h

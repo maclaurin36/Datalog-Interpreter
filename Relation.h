@@ -8,6 +8,8 @@
 #include "Header.h"
 #include "Tuple.h"
 #include <set>
+#include <map>
+
 class Relation {
 private:
     std::string name;
@@ -33,6 +35,8 @@ public:
     void Rename(Relation*& relation, std::vector<std::string>* listOfAttributes); // Defines the new header
     // TODO (1) Add join and union functions here
     Relation* Join(Relation* joinTo);
+    Relation* JoinHeaderWith(Relation* secondRelation, std::map<int,int>* commonAttributes);
+    bool IsJoinable(const Tuple& tuple1, const Tuple& tuple2, const std::vector<int>& listOfJoinIndices);
     bool Union(Relation* incomingRelation);
     // Join - another relation to join with, returns the joined relation, always possible - Cartesian Product?
     // Union - the one you are inside is the database relation, the one you pass in is the other one
