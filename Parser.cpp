@@ -231,8 +231,8 @@ void Parser::Run() {
         */
     }
     catch (std::string error) {
-        //std::cout << "Failure!" << std::endl;
-        //std::cout << "  " << error << std::endl;
+        std::cout << "Failure!" << std::endl;
+        std::cout << "  " << error << std::endl;
     }
 
 }

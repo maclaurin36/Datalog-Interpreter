@@ -19,6 +19,7 @@ public:
     void Run();
     Relation* EvaluatePredicate(Predicate& p);
     std::string QueryResultToString(Predicate* query, Relation* relation);
+    void Test();
 };
 
 

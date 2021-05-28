@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /users/guest/j/jclar234/CS236/Project3/CLION2
+CMAKE_SOURCE_DIR = /users/guest/j/jclar234/CS236/Project4/CLION
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo
+CMAKE_BINARY_DIR = /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/CMakeFiles /users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

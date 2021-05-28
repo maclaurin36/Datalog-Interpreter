@@ -1,4 +1,4 @@
-# Install script for directory: /users/guest/j/jclar234/CS236/Project3/CLION2
+# Install script for directory: /users/guest/j/jclar234/CS236/Project4/CLION
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/users/guest/j/jclar234/CS236/Project3/CLION2/cmake-build-debug-schizo/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

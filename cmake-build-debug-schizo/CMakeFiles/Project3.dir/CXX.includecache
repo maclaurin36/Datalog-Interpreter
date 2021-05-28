@@ -6,33 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Automaton.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Automaton.h
 Token.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Token.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Token.h
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Database.cpp
+/users/guest/j/jclar234/CS236/Project4/CLION/Database.cpp
 Database.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Database.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Database.h
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Database.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Database.h
 map
 -
 Relation.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Relation.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Relation.h
 sstream
 -
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/DatalogProgram.h
+/users/guest/j/jclar234/CS236/Project4/CLION/DatalogProgram.h
 Predicate.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Predicate.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Predicate.h
 Rule.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Rule.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Rule.h
 sstream
 -
 set
 -
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Header.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Header.h
 string
 -
 vector
@@ -40,51 +40,51 @@ vector
 sstream
 -
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Interpreter.cpp
+/users/guest/j/jclar234/CS236/Project4/CLION/Interpreter.cpp
 Interpreter.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Interpreter.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Interpreter.h
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Interpreter.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Interpreter.h
 DatalogProgram.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/DatalogProgram.h
+/users/guest/j/jclar234/CS236/Project4/CLION/DatalogProgram.h
 Database.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Database.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Database.h
 iostream
 -
 sstream
 -
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Lexer.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Lexer.h
 vector
 -
 Automaton.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Automaton.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Automaton.h
 Token.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Token.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Token.h
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Parameter.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Parameter.h
 Token.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Token.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Token.h
 string
 -
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Parser.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Parser.h
 Token.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Token.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Token.h
 Parameter.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Parameter.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Parameter.h
 Predicate.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Predicate.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Predicate.h
 Rule.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Rule.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Rule.h
 DatalogProgram.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/DatalogProgram.h
+/users/guest/j/jclar234/CS236/Project4/CLION/DatalogProgram.h
 vector
 -
 iostream
 -
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Predicate.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Predicate.h
 string
 -
 vector
@@ -92,33 +92,33 @@ vector
 sstream
 -
 Parameter.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Parameter.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Parameter.h
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Relation.cpp
+/users/guest/j/jclar234/CS236/Project4/CLION/Relation.cpp
 Relation.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Relation.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Relation.h
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Relation.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Relation.h
 string
 -
 Header.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Header.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Header.h
 Tuple.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Tuple.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Tuple.h
 set
 -
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Rule.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Rule.h
 string
 -
 Predicate.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Predicate.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Predicate.h
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Token.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Token.h
 string
 -
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/Tuple.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Tuple.h
 string
 -
 vector
@@ -126,13 +126,13 @@ vector
 sstream
 -
 
-/users/guest/j/jclar234/CS236/Project3/CLION2/main.cpp
+/users/guest/j/jclar234/CS236/Project4/CLION/main.cpp
 Lexer.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Lexer.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Lexer.h
 Parser.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Parser.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Parser.h
 Interpreter.h
-/users/guest/j/jclar234/CS236/Project3/CLION2/Interpreter.h
+/users/guest/j/jclar234/CS236/Project4/CLION/Interpreter.h
 iostream
 -
 fstream

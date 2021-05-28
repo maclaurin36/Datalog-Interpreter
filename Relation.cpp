@@ -129,3 +129,17 @@ Relation::Relation(Relation *copyRelation) {
     SetHeader(newHeader);
     isConstant = copyRelation->IsConstant();
 }
+
+Relation *Relation::Join(Relation *joinTo) {
+
+    return nullptr;
+}
+
+bool Relation::Union(Relation *incomingRelation) {
+    std::set<Tuple> incomingTuples = incomingRelation->GetRows();
+    bool tupleInserted = false;
+    for (auto it = incomingTuples.begin(); it != incomingTuples.end(); it++) {
+        tupleInserted = rows.insert((*it)).second;
+    }
+    return tupleInserted;
+}

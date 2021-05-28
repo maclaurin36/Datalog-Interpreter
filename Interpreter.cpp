@@ -32,6 +32,16 @@ void Interpreter::Run() {
         database->GetMapElement((*it)->GetName())->AddTuple(newTuple);
     }
 
+    // TODO (2) Evaluate rules here (output and don't forget Query Results:)
+    // Evaluate rules here (order of the input file)
+        // 1) Evaluate the predicates on the right-hand side of the rule (same as queries)
+        // 2) Join the relations that result
+        // 3) Project the columns that appear in the head predicate (in head predicate order)
+        // 4) Rename the relation to make it union compatible with the scheme in the database (look for the scheme with the same name as the rule)
+        // 5) Union with the relation in the database (same name) - modifies database
+        // If new tuples were added restart (use set.insert(myTuple).second which returns a boolean value if the tuple was new), pass through all rules
+        // TODO (3) Figure out when to terminate (Fixed Point Algorithm)
+
     // For each query
     //      get the relation with the same name as the query
     //      select for each constant in the query
@@ -134,4 +144,11 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
         ss << "No";
     }
     return ss.str();
+}
+
+void Interpreter::Test() {
+    Relation* fv = database->GetMapElement("fv");
+    Relation* vb = database->GetMapElement("vb");
+    fv->Union(vb);
+    std::cout << fv->toString() << std::endl;
 }

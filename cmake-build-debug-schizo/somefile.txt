@@ -1,14 +1,15 @@
-# COPYRIGHT © BRIGHAM YOUNG UNIVERSITY CS 236
-# FOR USE ONLY DURING SPRING 2021 SEMESTER
 Schemes:
-name(a,b,c,d)
+fv(F,V)
+vb(V,B)
+bf(B,F)
 Facts:
-name('1','1','1','1').
-name('2','1','1','1').
-name('2','2','1','1').
-name('2','2','2','1').
-name('2','2','3','3').
-Rules:
-Queries:
-name(a,a,b,c)?
+fv('banana','celery')
+fv('apple','artichoke')
+fv('mango','broccoli')
+vb('celery','italian bread')
+vb('carrot','american bread')
+vb('broccoli','bad bread')
 
+Rules:bf(gb,gf):-fv(gf,gv),vb(gv,gb)
+
+Queries:
