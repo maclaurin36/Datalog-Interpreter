@@ -130,9 +130,26 @@ Relation::Relation(Relation *copyRelation) {
     isConstant = copyRelation->IsConstant();
 }
 
-Relation *Relation::Join(Relation *joinTo) {
+Relation *Relation::Join(Relation *secondRelation) {
+    std::list<std::pair<int,int>>* commonAttributeList = new std::list<std::pair<int,int>>;
+    std::set<int>* firstRelationUnique = new std::set<int>;
+    std::set<int>* secondRelationUnique = new std::set<int>;
+    Relation* newRelation = this->JoinHeaderWith(secondRelation, commonAttributeList, firstRelationUnique, secondRelationUnique);
 
-    return nullptr;
+    if (newRelation->GetHeader()->GetAttributes().size() < header->GetAttributes().size() + secondRelation->GetHeader()->GetAttributes().size()) {
+        std::set<Tuple> secondRows = secondRelation->GetRows();
+        for (auto itR1Tuple = rows.begin(); itR1Tuple != rows.end(); itR1Tuple++) {
+            for (auto itR2Tuple = secondRows.begin(); itR2Tuple != secondRows.end(); itR2Tuple++) {
+                if (IsJoinable((*itR1Tuple), (*itR2Tuple), commonAttributeList)) {
+                    newRelation->AddTuple(JoinTuples((*itR1Tuple), *itR2Tuple, commonAttributeList, firstRelationUnique, secondRelationUnique));
+                }
+            }
+        }
+    }
+    delete commonAttributeList;
+    delete firstRelationUnique;
+    delete secondRelationUnique;
+    return newRelation;
 }
 
 bool Relation::Union(Relation *incomingRelation) {
@@ -144,15 +161,14 @@ bool Relation::Union(Relation *incomingRelation) {
     return tupleInserted;
 }
 
-/// TODO figure out how to combine this with IsJoinable()
 // commonAttributes contains the common attributes in the order (->,parameter), and the Relation's header is common,uncommon->,uncommonParam
 Relation* Relation::JoinHeaderWith(Relation* secondRelation, std::list<std::pair<int,int>>* commonAttributeList, std::set<int>* firstRelationUnique, std::set<int>* secondRelationUnique) {
     std::vector<std::string> attributes1 = header->GetAttributes();
     std::vector<std::string> attributes2 = secondRelation->GetHeader()->GetAttributes();
 
-    commonAttributeList->clear();
-    firstRelationUnique->clear();
-    secondRelationUnique->clear();
+    //commonAttributeList->clear();
+    //firstRelationUnique->clear();
+    //secondRelationUnique->clear();
 
     bool uniqueValue = true;
     std::set<int> commonAttributes;
