@@ -151,9 +151,19 @@ void Interpreter::Test() {
     Relation* vb = database->GetMapElement("vb");
     Relation* cd = database->GetMapElement("cd");
     Relation* bfc = database->GetMapElement("bfc");
-    std::map<int,int>* commonAttributes = new std::map<int,int>;
-    Relation* newRelation = fv->JoinHeaderWith(vb, commonAttributes);
-    Relation* newRelation2 = newRelation->JoinHeaderWith(bfc, commonAttributes);
+    std::list<std::pair<int,int>>* commonAttributes = new std::list<std::pair<int,int>>;
+    std::set<int>* firstRelationUnique = new std::set<int>;
+    std::set<int>* secondRelationUnique = new std::set<int>;
+    Relation* newRelation = fv->JoinHeaderWith(vb, commonAttributes, firstRelationUnique, secondRelationUnique);
+    for (auto it = fv->GetRows().begin(); it != fv->GetRows().end(); it++) {
+        for (auto it2 = vb->GetRows().begin(); it2 != vb->GetRows().end(); it2++) {
+            if (fv->IsJoinable(*it, *it2, commonAttributes)) {
+                Tuple newTuple = fv->JoinTuples(*it, *it2, commonAttributes, firstRelationUnique, secondRelationUnique);
+                std::cout << "Hello";
+            }
+        }
+    }
+    //bool IsJoinable = newRelation.IsJoinable(tuple1,tuple2, commonAttributes);
     std::cout << "Hello";
     /*
     std::vector<int> something = {0};

@@ -144,51 +144,45 @@ bool Relation::Union(Relation *incomingRelation) {
     return tupleInserted;
 }
 
-bool Relation::IsJoinable(const Tuple& tuple1, const Tuple& tuple2, const std::vector<int>& listOfJoinIndices) {
-    bool isJoinable = true;
-    for (unsigned int i = 0; i < listOfJoinIndices.size(); i++) {
-        if (tuple1.GetValueAtIndex(listOfJoinIndices.at(i)) != tuple2.GetValueAtIndex(listOfJoinIndices.at(i))) {
-            isJoinable = false;
-        }
-    }
-    return isJoinable;
-}
-
 /// TODO figure out how to combine this with IsJoinable()
 // commonAttributes contains the common attributes in the order (->,parameter), and the Relation's header is common,uncommon->,uncommonParam
-Relation* Relation::JoinHeaderWith(Relation* secondRelation, std::map<int,int>* commonAttributes) {
+Relation* Relation::JoinHeaderWith(Relation* secondRelation, std::list<std::pair<int,int>>* commonAttributeList, std::set<int>* firstRelationUnique, std::set<int>* secondRelationUnique) {
     std::vector<std::string> attributes1 = header->GetAttributes();
     std::vector<std::string> attributes2 = secondRelation->GetHeader()->GetAttributes();
 
-    commonAttributes->clear();
+    commonAttributeList->clear();
+    firstRelationUnique->clear();
+    secondRelationUnique->clear();
 
     bool uniqueValue = true;
-    std::set<int> secondRelationUnique;
+    std::set<int> commonAttributes;
     Header* newHeader = new Header();
 
     for (unsigned int j = 0; j < attributes2.size(); j++) {
         for (unsigned int i = 0; i < attributes1.size(); i++) {
             if (attributes1.at(i) == attributes2.at(j)) {
                 newHeader->AddAttribute(attributes1.at(i));
-                commonAttributes->insert(std::pair<int,int>(i,j));
+                commonAttributes.insert(i);
+                commonAttributeList->push_back(std::pair<int,int>(i,j));
                 uniqueValue = false;
             }
         }
         if (uniqueValue) {
-            secondRelationUnique.insert(j);
+            secondRelationUnique->insert(j);
         } else {
             uniqueValue = true;
         }
     }
 
     for (unsigned int i = 0; i < attributes1.size(); i++) {
-        if (commonAttributes->find(i) == commonAttributes->end()) {
+        if (commonAttributes.find(i) == commonAttributes.end()) {
+            firstRelationUnique->insert(i);
             newHeader->AddAttribute(attributes1.at(i));
         }
     }
 
     for (unsigned int j = 0; j < attributes2.size(); j++) {
-        if (secondRelationUnique.find(j) != secondRelationUnique.end()) {
+        if (secondRelationUnique->find(j) != secondRelationUnique->end()) {
             newHeader->AddAttribute(attributes2.at(j));
         }
     }
@@ -196,4 +190,33 @@ Relation* Relation::JoinHeaderWith(Relation* secondRelation, std::map<int,int>* 
     newRelation->SetHeader(newHeader);
 
     return newRelation;
+}
+
+/// Assuming the Tuples are joinable
+Tuple Relation::JoinTuples(const Tuple &tuple1, const Tuple &tuple2, const std::list<std::pair<int, int>> *commonAttributes, std::set<int>* firstRelationUnique, std::set<int>* secondRelationUnique) {
+    Tuple newTuple;
+    bool isJoinable = true;
+    for (auto it = commonAttributes->begin(); it != commonAttributes->end(); it++) {
+        newTuple.AddElement(tuple1.GetValueAtIndex((*it).first));
+    }
+    for (unsigned int i = 0; i < tuple1.GetSize(); i++) {
+        if (firstRelationUnique->find(i) != firstRelationUnique->end()) {
+            newTuple.AddElement(tuple1.GetValueAtIndex(i));
+        }
+    }
+    for (unsigned int i = 0; i < tuple2.GetSize(); i++) {
+        if (secondRelationUnique->find(i) != secondRelationUnique->end()) {
+            newTuple.AddElement(tuple2.GetValueAtIndex(i));
+        }
+    }
+    return newTuple;
+}
+
+bool Relation::IsJoinable(const Tuple &tuple1, const Tuple &tuple2, std::list<std::pair<int,int>>* commonAttributes) {
+    for (auto it = commonAttributes->begin(); it != commonAttributes->end(); it++) {
+        if (tuple1.GetValueAtIndex((*it).first) != tuple2.GetValueAtIndex((*it).second)) {
+            return false;
+        }
+    }
+    return true;
 }
