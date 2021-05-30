@@ -32,7 +32,6 @@ void Interpreter::Run() {
         database->GetMapElement((*it)->GetName())->AddTuple(newTuple);
     }
 
-    // TODO (2) Evaluate rules here (output and don't forget Query Results:)
     std::cout << "Rule Evaluation" << std::endl;
     bool tupleAdded = false;
     int numberOfPasses = 0;
@@ -83,7 +82,6 @@ void Interpreter::Run() {
             // If new tuples were added restart (use set.insert(myTuple).second which returns a boolean value if the tuple was new), pass through all rules
         }
         numberOfPasses++;
-        // TODO (3) Figure out when to terminate (Fixed Point Algorithm)
     } while (tupleAdded);
 
     std::cout << std::endl << "Schemes populated after " << numberOfPasses << " passes through the Rules." << std::endl << std::endl;
