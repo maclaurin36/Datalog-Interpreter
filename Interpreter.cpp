@@ -192,38 +192,3 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
     }
     return ss.str();
 }
-
-void Interpreter::Test() {
-    Relation* fv = database->GetMapElement("fv");
-    Relation* vb = database->GetMapElement("vb");
-    Relation* cd = database->GetMapElement("cd");
-    Relation* bfc = database->GetMapElement("bfc");
-    Relation* newRelation = fv->Join(cd);
-    Relation* newRelation2 = newRelation->Join(bfc);
-    /*std::list<std::pair<int,int>>* commonAttributes = new std::list<std::pair<int,int>>;
-    std::set<int>* firstRelationUnique = new std::set<int>;
-    std::set<int>* secondRelationUnique = new std::set<int>;
-    Relation* newRelation = fv->JoinHeaderWith(vb, commonAttributes, firstRelationUnique, secondRelationUnique);
-    std::vector<Tuple> tupleCollection;
-    for (auto it = fv->GetRows().begin(); it != fv->GetRows().end(); it++) {
-        for (auto it2 = vb->GetRows().begin(); it2 != vb->GetRows().end(); it2++) {
-            if (fv->IsJoinable(*it, *it2, commonAttributes)) {
-                Tuple newTuple = fv->JoinTuples(*it, *it2, commonAttributes, firstRelationUnique, secondRelationUnique);
-                tupleCollection.push_back(newTuple);
-                std::cout << "Hello";
-            }
-        }
-    }*/
-    //bool IsJoinable = newRelation.IsJoinable(tuple1,tuple2, commonAttributes);
-    std::cout << "Hello";
-    /*
-    std::vector<int> something = {0};
-    for (auto it = fv->GetRows().begin(); it != fv->GetRows().end(); it++) {
-        for (auto it2 = vb->GetRows().begin(); it2 != vb->GetRows().end(); it2++) {
-            if (fv->IsJoinable((*it), (*it2), something)) {
-                std::cout << (*it).toString() << " is joinable with " << (*it2).toString() << std::endl;
-            }
-        }
-    }*/
-
-}

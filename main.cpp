@@ -35,7 +35,6 @@ int main(int argc, char** argv) {
     Database* database = new Database();
     Interpreter* interpreter = new Interpreter(program, database);
     interpreter->Run();
-    //interpreter->Test();
     delete parser;
     delete lexer;
     delete interpreter;//

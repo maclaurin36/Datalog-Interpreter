@@ -217,7 +217,6 @@ Relation* Relation::JoinHeaderWith(Relation* secondRelation, std::list<std::pair
 /// Assuming the Tuples are joinable
 Tuple Relation::JoinTuples(const Tuple &tuple1, const Tuple &tuple2, const std::list<std::pair<int, int>> *commonAttributes, std::set<int>* firstRelationUnique, std::set<int>* secondRelationUnique) {
     Tuple newTuple;
-    bool isJoinable = true;
     for (auto it = commonAttributes->begin(); it != commonAttributes->end(); it++) {
         newTuple.AddElement(tuple1.GetValueAtIndex((*it).first));
     }
