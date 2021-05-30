@@ -30,3 +30,11 @@ void Rule::setHeadPredicate(Predicate* headPredicate) {
 void Rule::addPredicate(Predicate* newPredicate) {
     predicateList.push_back(newPredicate);
 }
+
+std::vector<Predicate *> &Rule::GetPredicateList() {
+    return predicateList;
+}
+
+Predicate *Rule::GetHeadPredicate() {
+    return headPredicate;
+}

@@ -33,15 +33,56 @@ void Interpreter::Run() {
     }
 
     // TODO (2) Evaluate rules here (output and don't forget Query Results:)
-    // Evaluate rules here (order of the input file)
-        // 1) Evaluate the predicates on the right-hand side of the rule (same as queries)
-        // 2) Join the relations that result
-        // 3) Project the columns that appear in the head predicate (in head predicate order)
-        // 4) Rename the relation to make it union compatible with the scheme in the database (look for the scheme with the same name as the rule)
-        // 5) Union with the relation in the database (same name) - modifies database
-        // If new tuples were added restart (use set.insert(myTuple).second which returns a boolean value if the tuple was new), pass through all rules
+    std::cout << "Rule Evaluation" << std::endl;
+    bool tupleAdded = false;
+    int numberOfPasses = 0;
+    do {
+        // Evaluate rules here (order of the input file)
+        std::vector<Rule*>* ruleVector = program->GetRuleVector();
+        for (unsigned int i = 0; i < ruleVector->size(); i++) {
+            // 1) Evaluate the predicates on the right-hand side of the rule (same as queries)
+            Rule* currentRule = ruleVector->at(i);
+            std::vector<Predicate*> predicateList = currentRule->GetPredicateList(); // by reference
+            std::vector<Relation*> relationList;
+            for (unsigned int j = 0; j < predicateList.size(); j++) {
+                relationList.push_back(EvaluatePredicate(*predicateList.at(j)));
+            }
+            // 2) Join the relations that result
+            Relation* joiningRelation = relationList.at(0);
+            for (unsigned int j = 1; j < relationList.size(); j++) {
+                Relation* deleteRelation = joiningRelation;
+                joiningRelation = joiningRelation->Join(relationList.at(j));
+                delete deleteRelation;
+            }
+            // 3) Project the columns that appear in the head predicate (in head predicate order)
+            {
+                std::vector<int> listOfIndices;
+                for (unsigned int j = 0; j < currentRule->GetHeadPredicate()->getList().size(); j++) {
+                    for (unsigned int k = 0; k < joiningRelation->GetHeader()->GetAttributes().size(); k++) {
+                        if (currentRule->GetHeadPredicate()->getList().at(j)->getParameterValue() == joiningRelation->GetHeader()->GetAttributes().at(k)) {
+                            listOfIndices.push_back(k);
+                        }
+                    }
+                }
+                Relation *deleteRelation = joiningRelation;
+                joiningRelation = joiningRelation->Project(&listOfIndices);
+                delete deleteRelation;
+            }
+            // 4) Rename the relation to make it union compatible with the scheme in the database (look for the scheme with the same name as the rule)
+            Relation* databaseRelation = database->GetMapElement(currentRule->GetHeadPredicate()->GetName());
+            joiningRelation->Rename(joiningRelation, &databaseRelation->GetHeader()->GetAttributes());
+            // 5) Union with the relation in the database (same name) - modifies database
+            tupleAdded = databaseRelation->Union(joiningRelation);
+            delete joiningRelation;
+            // If new tuples were added restart (use set.insert(myTuple).second which returns a boolean value if the tuple was new), pass through all rules
+        }
+        numberOfPasses++;
         // TODO (3) Figure out when to terminate (Fixed Point Algorithm)
+    } while (tupleAdded);
 
+    std::cout << std::endl << "Schemes populated after " << numberOfPasses << " passes through the Rules." << std::endl << std::endl;
+
+    std::cout << "Query Evaluation" << std::endl;
     // For each query
     //      get the relation with the same name as the query
     //      select for each constant in the query
