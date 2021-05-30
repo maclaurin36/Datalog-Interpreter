@@ -7,8 +7,10 @@
 #include <string>
 #include "Header.h"
 #include "Tuple.h"
+#include <iostream>
 #include <set>
 #include <list>
+#include <sstream>
 
 class Relation {
 private:
@@ -39,6 +41,7 @@ public:
     Tuple JoinTuples(const Tuple &tuple1, const Tuple &tuple2, const std::list<std::pair<int, int>> *commonAttributes, std::set<int>* firstRelationUnique, std::set<int>* secondRelationUnique);
     bool Union(Relation* incomingRelation);
     Relation* Join(Relation* secondRelation);
+    void PrintTuplesAddedByRule(Relation* incomingRelation, const Tuple &newTuple);
     // Join - another relation to join with, returns the joined relation, always possible - Cartesian Product?
     // Union - the one you are inside is the database relation, the one you pass in is the other one
 };

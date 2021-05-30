@@ -136,7 +136,7 @@ Relation *Relation::Join(Relation *secondRelation) {
     std::set<int>* secondRelationUnique = new std::set<int>;
     Relation* newRelation = this->JoinHeaderWith(secondRelation, commonAttributeList, firstRelationUnique, secondRelationUnique);
 
-    if (newRelation->GetHeader()->GetAttributes().size() < header->GetAttributes().size() + secondRelation->GetHeader()->GetAttributes().size()) {
+    //if (newRelation->GetHeader()->GetAttributes().size() < header->GetAttributes().size() + secondRelation->GetHeader()->GetAttributes().size()) {
         std::set<Tuple> secondRows = secondRelation->GetRows();
         for (auto itR1Tuple = rows.begin(); itR1Tuple != rows.end(); itR1Tuple++) {
             for (auto itR2Tuple = secondRows.begin(); itR2Tuple != secondRows.end(); itR2Tuple++) {
@@ -145,7 +145,7 @@ Relation *Relation::Join(Relation *secondRelation) {
                 }
             }
         }
-    }
+    //}
     delete commonAttributeList;
     delete firstRelationUnique;
     delete secondRelationUnique;
@@ -155,10 +155,16 @@ Relation *Relation::Join(Relation *secondRelation) {
 bool Relation::Union(Relation *incomingRelation) {
     std::set<Tuple> incomingTuples = incomingRelation->GetRows();
     bool tupleInserted = false;
+    bool anyTupleInserted = false;
     for (auto it = incomingTuples.begin(); it != incomingTuples.end(); it++) {
         tupleInserted = rows.insert((*it)).second;
+        if (tupleInserted) {
+            anyTupleInserted = true;
+            // REMOVE THIS IF YOU DON'T WANT TO PRINT OUT WHAT TUPLES THE RULE ADDED
+            PrintTuplesAddedByRule(incomingRelation, (*it));
+        }
     }
-    return tupleInserted;
+    return anyTupleInserted;
 }
 
 // commonAttributes contains the common attributes in the order (->,parameter), and the Relation's header is common,uncommon->,uncommonParam
@@ -235,4 +241,17 @@ bool Relation::IsJoinable(const Tuple &tuple1, const Tuple &tuple2, std::list<st
         }
     }
     return true;
+}
+
+void Relation::PrintTuplesAddedByRule(Relation *incomingRelation, const Tuple &newTuple) {
+    std::stringstream ss;
+    ss << "  ";
+    for (unsigned int i = 0; i < newTuple.GetSize(); i++) {
+        if (i != 0) {
+            ss << ", ";
+        }
+        ss << incomingRelation->header->GetAttributes().at(i) << "=" << newTuple.GetValueAtIndex(i);
+    }
+    ss << std::endl;
+    std::cout << ss.str();
 }

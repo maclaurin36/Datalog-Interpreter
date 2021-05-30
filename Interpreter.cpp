@@ -37,11 +37,13 @@ void Interpreter::Run() {
     bool tupleAdded = false;
     int numberOfPasses = 0;
     do {
+        tupleAdded = false;
         // Evaluate rules here (order of the input file)
         std::vector<Rule*>* ruleVector = program->GetRuleVector();
         for (unsigned int i = 0; i < ruleVector->size(); i++) {
             // 1) Evaluate the predicates on the right-hand side of the rule (same as queries)
             Rule* currentRule = ruleVector->at(i);
+            std::cout << currentRule->toString() << std::endl;
             std::vector<Predicate*> predicateList = currentRule->GetPredicateList(); // by reference
             std::vector<Relation*> relationList;
             for (unsigned int j = 0; j < predicateList.size(); j++) {
@@ -72,7 +74,11 @@ void Interpreter::Run() {
             Relation* databaseRelation = database->GetMapElement(currentRule->GetHeadPredicate()->GetName());
             joiningRelation->Rename(joiningRelation, &databaseRelation->GetHeader()->GetAttributes());
             // 5) Union with the relation in the database (same name) - modifies database
-            tupleAdded = databaseRelation->Union(joiningRelation);
+            bool potentialTupleAdded = false;
+            potentialTupleAdded = databaseRelation->Union(joiningRelation);
+            if (!tupleAdded) {
+                tupleAdded = potentialTupleAdded;
+            }
             delete joiningRelation;
             // If new tuples were added restart (use set.insert(myTuple).second which returns a boolean value if the tuple was new), pass through all rules
         }
