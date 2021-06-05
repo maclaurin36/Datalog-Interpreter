@@ -6,6 +6,7 @@
 #define PROJECT_0_INTERPRETER_H
 #include "DatalogProgram.h"
 #include "Database.h"
+#include "Graph.h"
 #include <iostream>
 #include <sstream>
 

@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/users/guest/j/jclar234/CS236/Project4/CLION/. 
+CXX_INCLUDES = -I/users/guest/j/jclar234/CS236/Project5/CLION/. 
 

@@ -1,4 +1,4 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /users/guest/j/jclar234/CS236/Project4/CLION
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /users/guest/j/jclar234/CS236/Project5/CLION
 -- Configuring done
 -- Generating done
--- Build files have been written to: /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo
+-- Build files have been written to: /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo

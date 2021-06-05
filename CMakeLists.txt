@@ -39,4 +39,4 @@ add_executable(Project3
         Token.cpp
         Token.h
         Tuple.cpp
-        Tuple.h)
+        Tuple.h Graph.cpp Graph.h)

@@ -28,7 +28,17 @@ CMakeFiles/Project3.dir/IDAutomaton.cpp.o
  /users/guest/j/jclar234/CS236/Project4/CLION/IDAutomaton.h
  /users/guest/j/jclar234/CS236/Project4/CLION/Token.h
 CMakeFiles/Project3.dir/Interpreter.cpp.o
+ /users/guest/j/jclar234/CS236/Project4/CLION/Database.h
+ /users/guest/j/jclar234/CS236/Project4/CLION/DatalogProgram.h
+ /users/guest/j/jclar234/CS236/Project4/CLION/Header.h
  /users/guest/j/jclar234/CS236/Project4/CLION/Interpreter.cpp
+ /users/guest/j/jclar234/CS236/Project4/CLION/Interpreter.h
+ /users/guest/j/jclar234/CS236/Project4/CLION/Parameter.h
+ /users/guest/j/jclar234/CS236/Project4/CLION/Predicate.h
+ /users/guest/j/jclar234/CS236/Project4/CLION/Relation.h
+ /users/guest/j/jclar234/CS236/Project4/CLION/Rule.h
+ /users/guest/j/jclar234/CS236/Project4/CLION/Token.h
+ /users/guest/j/jclar234/CS236/Project4/CLION/Tuple.h
 CMakeFiles/Project3.dir/Lexer.cpp.o
  /users/guest/j/jclar234/CS236/Project4/CLION/Automaton.h
  /users/guest/j/jclar234/CS236/Project4/CLION/CommentAutomaton.h

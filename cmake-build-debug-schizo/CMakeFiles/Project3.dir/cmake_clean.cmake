@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Project3.dir/CommentAutomaton.cpp.o"
   "CMakeFiles/Project3.dir/Database.cpp.o"
   "CMakeFiles/Project3.dir/DatalogProgram.cpp.o"
+  "CMakeFiles/Project3.dir/Graph.cpp.o"
   "CMakeFiles/Project3.dir/Header.cpp.o"
   "CMakeFiles/Project3.dir/IDAutomaton.cpp.o"
   "CMakeFiles/Project3.dir/Interpreter.cpp.o"

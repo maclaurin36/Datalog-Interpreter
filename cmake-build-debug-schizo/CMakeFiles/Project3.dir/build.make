@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /users/guest/j/jclar234/CS236/Project4/CLION
+CMAKE_SOURCE_DIR = /users/guest/j/jclar234/CS236/Project5/CLION
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo
+CMAKE_BINARY_DIR = /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Project3.dir/depend.make
@@ -59,224 +59,237 @@ include CMakeFiles/Project3.dir/flags.make
 
 CMakeFiles/Project3.dir/CommentAutomaton.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/CommentAutomaton.cpp.o: ../CommentAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project3.dir/CommentAutomaton.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/CommentAutomaton.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/CommentAutomaton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Project3.dir/CommentAutomaton.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/CommentAutomaton.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/CommentAutomaton.cpp
 
 CMakeFiles/Project3.dir/CommentAutomaton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/CommentAutomaton.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/CommentAutomaton.cpp > CMakeFiles/Project3.dir/CommentAutomaton.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/CommentAutomaton.cpp > CMakeFiles/Project3.dir/CommentAutomaton.cpp.i
 
 CMakeFiles/Project3.dir/CommentAutomaton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/CommentAutomaton.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/CommentAutomaton.cpp -o CMakeFiles/Project3.dir/CommentAutomaton.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/CommentAutomaton.cpp -o CMakeFiles/Project3.dir/CommentAutomaton.cpp.s
 
 CMakeFiles/Project3.dir/Database.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Database.cpp.o: ../Database.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project3.dir/Database.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Database.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Database.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Project3.dir/Database.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Database.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Database.cpp
 
 CMakeFiles/Project3.dir/Database.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Database.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Database.cpp > CMakeFiles/Project3.dir/Database.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Database.cpp > CMakeFiles/Project3.dir/Database.cpp.i
 
 CMakeFiles/Project3.dir/Database.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Database.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Database.cpp -o CMakeFiles/Project3.dir/Database.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Database.cpp -o CMakeFiles/Project3.dir/Database.cpp.s
 
 CMakeFiles/Project3.dir/DatalogProgram.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/DatalogProgram.cpp.o: ../DatalogProgram.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project3.dir/DatalogProgram.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/DatalogProgram.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/DatalogProgram.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Project3.dir/DatalogProgram.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/DatalogProgram.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/DatalogProgram.cpp
 
 CMakeFiles/Project3.dir/DatalogProgram.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/DatalogProgram.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/DatalogProgram.cpp > CMakeFiles/Project3.dir/DatalogProgram.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/DatalogProgram.cpp > CMakeFiles/Project3.dir/DatalogProgram.cpp.i
 
 CMakeFiles/Project3.dir/DatalogProgram.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/DatalogProgram.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/DatalogProgram.cpp -o CMakeFiles/Project3.dir/DatalogProgram.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/DatalogProgram.cpp -o CMakeFiles/Project3.dir/DatalogProgram.cpp.s
 
 CMakeFiles/Project3.dir/Header.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Header.cpp.o: ../Header.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project3.dir/Header.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Header.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Header.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project3.dir/Header.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Header.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Header.cpp
 
 CMakeFiles/Project3.dir/Header.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Header.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Header.cpp > CMakeFiles/Project3.dir/Header.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Header.cpp > CMakeFiles/Project3.dir/Header.cpp.i
 
 CMakeFiles/Project3.dir/Header.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Header.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Header.cpp -o CMakeFiles/Project3.dir/Header.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Header.cpp -o CMakeFiles/Project3.dir/Header.cpp.s
 
 CMakeFiles/Project3.dir/IDAutomaton.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/IDAutomaton.cpp.o: ../IDAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project3.dir/IDAutomaton.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/IDAutomaton.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/IDAutomaton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project3.dir/IDAutomaton.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/IDAutomaton.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/IDAutomaton.cpp
 
 CMakeFiles/Project3.dir/IDAutomaton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/IDAutomaton.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/IDAutomaton.cpp > CMakeFiles/Project3.dir/IDAutomaton.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/IDAutomaton.cpp > CMakeFiles/Project3.dir/IDAutomaton.cpp.i
 
 CMakeFiles/Project3.dir/IDAutomaton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/IDAutomaton.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/IDAutomaton.cpp -o CMakeFiles/Project3.dir/IDAutomaton.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/IDAutomaton.cpp -o CMakeFiles/Project3.dir/IDAutomaton.cpp.s
 
 CMakeFiles/Project3.dir/Interpreter.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Interpreter.cpp.o: ../Interpreter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project3.dir/Interpreter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Interpreter.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Interpreter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project3.dir/Interpreter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Interpreter.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Interpreter.cpp
 
 CMakeFiles/Project3.dir/Interpreter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Interpreter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Interpreter.cpp > CMakeFiles/Project3.dir/Interpreter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Interpreter.cpp > CMakeFiles/Project3.dir/Interpreter.cpp.i
 
 CMakeFiles/Project3.dir/Interpreter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Interpreter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Interpreter.cpp -o CMakeFiles/Project3.dir/Interpreter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Interpreter.cpp -o CMakeFiles/Project3.dir/Interpreter.cpp.s
 
 CMakeFiles/Project3.dir/Lexer.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Lexer.cpp.o: ../Lexer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project3.dir/Lexer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Lexer.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Lexer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project3.dir/Lexer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Lexer.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Lexer.cpp
 
 CMakeFiles/Project3.dir/Lexer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Lexer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Lexer.cpp > CMakeFiles/Project3.dir/Lexer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Lexer.cpp > CMakeFiles/Project3.dir/Lexer.cpp.i
 
 CMakeFiles/Project3.dir/Lexer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Lexer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Lexer.cpp -o CMakeFiles/Project3.dir/Lexer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Lexer.cpp -o CMakeFiles/Project3.dir/Lexer.cpp.s
 
 CMakeFiles/Project3.dir/main.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project3.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/main.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Project3.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/main.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/main.cpp
 
 CMakeFiles/Project3.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/main.cpp > CMakeFiles/Project3.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/main.cpp > CMakeFiles/Project3.dir/main.cpp.i
 
 CMakeFiles/Project3.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/main.cpp -o CMakeFiles/Project3.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/main.cpp -o CMakeFiles/Project3.dir/main.cpp.s
 
 CMakeFiles/Project3.dir/MatcherAutomaton.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/MatcherAutomaton.cpp.o: ../MatcherAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Project3.dir/MatcherAutomaton.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/MatcherAutomaton.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/MatcherAutomaton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Project3.dir/MatcherAutomaton.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/MatcherAutomaton.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/MatcherAutomaton.cpp
 
 CMakeFiles/Project3.dir/MatcherAutomaton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/MatcherAutomaton.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/MatcherAutomaton.cpp > CMakeFiles/Project3.dir/MatcherAutomaton.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/MatcherAutomaton.cpp > CMakeFiles/Project3.dir/MatcherAutomaton.cpp.i
 
 CMakeFiles/Project3.dir/MatcherAutomaton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/MatcherAutomaton.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/MatcherAutomaton.cpp -o CMakeFiles/Project3.dir/MatcherAutomaton.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/MatcherAutomaton.cpp -o CMakeFiles/Project3.dir/MatcherAutomaton.cpp.s
 
 CMakeFiles/Project3.dir/Parameter.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Parameter.cpp.o: ../Parameter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Project3.dir/Parameter.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Parameter.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Parameter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Project3.dir/Parameter.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Parameter.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Parameter.cpp
 
 CMakeFiles/Project3.dir/Parameter.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Parameter.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Parameter.cpp > CMakeFiles/Project3.dir/Parameter.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Parameter.cpp > CMakeFiles/Project3.dir/Parameter.cpp.i
 
 CMakeFiles/Project3.dir/Parameter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Parameter.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Parameter.cpp -o CMakeFiles/Project3.dir/Parameter.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Parameter.cpp -o CMakeFiles/Project3.dir/Parameter.cpp.s
 
 CMakeFiles/Project3.dir/Parser.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Parser.cpp.o: ../Parser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Project3.dir/Parser.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Parser.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Project3.dir/Parser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Parser.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Parser.cpp
 
 CMakeFiles/Project3.dir/Parser.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Parser.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Parser.cpp > CMakeFiles/Project3.dir/Parser.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Parser.cpp > CMakeFiles/Project3.dir/Parser.cpp.i
 
 CMakeFiles/Project3.dir/Parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Parser.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Parser.cpp -o CMakeFiles/Project3.dir/Parser.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Parser.cpp -o CMakeFiles/Project3.dir/Parser.cpp.s
 
 CMakeFiles/Project3.dir/Predicate.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Predicate.cpp.o: ../Predicate.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Project3.dir/Predicate.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Predicate.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Predicate.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Project3.dir/Predicate.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Predicate.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Predicate.cpp
 
 CMakeFiles/Project3.dir/Predicate.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Predicate.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Predicate.cpp > CMakeFiles/Project3.dir/Predicate.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Predicate.cpp > CMakeFiles/Project3.dir/Predicate.cpp.i
 
 CMakeFiles/Project3.dir/Predicate.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Predicate.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Predicate.cpp -o CMakeFiles/Project3.dir/Predicate.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Predicate.cpp -o CMakeFiles/Project3.dir/Predicate.cpp.s
 
 CMakeFiles/Project3.dir/Relation.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Relation.cpp.o: ../Relation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Project3.dir/Relation.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Relation.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Relation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Project3.dir/Relation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Relation.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Relation.cpp
 
 CMakeFiles/Project3.dir/Relation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Relation.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Relation.cpp > CMakeFiles/Project3.dir/Relation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Relation.cpp > CMakeFiles/Project3.dir/Relation.cpp.i
 
 CMakeFiles/Project3.dir/Relation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Relation.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Relation.cpp -o CMakeFiles/Project3.dir/Relation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Relation.cpp -o CMakeFiles/Project3.dir/Relation.cpp.s
 
 CMakeFiles/Project3.dir/Rule.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Rule.cpp.o: ../Rule.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Project3.dir/Rule.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Rule.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Rule.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Project3.dir/Rule.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Rule.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Rule.cpp
 
 CMakeFiles/Project3.dir/Rule.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Rule.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Rule.cpp > CMakeFiles/Project3.dir/Rule.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Rule.cpp > CMakeFiles/Project3.dir/Rule.cpp.i
 
 CMakeFiles/Project3.dir/Rule.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Rule.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Rule.cpp -o CMakeFiles/Project3.dir/Rule.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Rule.cpp -o CMakeFiles/Project3.dir/Rule.cpp.s
 
 CMakeFiles/Project3.dir/StringAutomaton.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/StringAutomaton.cpp.o: ../StringAutomaton.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Project3.dir/StringAutomaton.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/StringAutomaton.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/StringAutomaton.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Project3.dir/StringAutomaton.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/StringAutomaton.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/StringAutomaton.cpp
 
 CMakeFiles/Project3.dir/StringAutomaton.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/StringAutomaton.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/StringAutomaton.cpp > CMakeFiles/Project3.dir/StringAutomaton.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/StringAutomaton.cpp > CMakeFiles/Project3.dir/StringAutomaton.cpp.i
 
 CMakeFiles/Project3.dir/StringAutomaton.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/StringAutomaton.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/StringAutomaton.cpp -o CMakeFiles/Project3.dir/StringAutomaton.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/StringAutomaton.cpp -o CMakeFiles/Project3.dir/StringAutomaton.cpp.s
 
 CMakeFiles/Project3.dir/Token.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Token.cpp.o: ../Token.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Project3.dir/Token.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Token.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Token.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Project3.dir/Token.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Token.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Token.cpp
 
 CMakeFiles/Project3.dir/Token.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Token.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Token.cpp > CMakeFiles/Project3.dir/Token.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Token.cpp > CMakeFiles/Project3.dir/Token.cpp.i
 
 CMakeFiles/Project3.dir/Token.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Token.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Token.cpp -o CMakeFiles/Project3.dir/Token.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Token.cpp -o CMakeFiles/Project3.dir/Token.cpp.s
 
 CMakeFiles/Project3.dir/Tuple.cpp.o: CMakeFiles/Project3.dir/flags.make
 CMakeFiles/Project3.dir/Tuple.cpp.o: ../Tuple.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Project3.dir/Tuple.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Tuple.cpp.o -c /users/guest/j/jclar234/CS236/Project4/CLION/Tuple.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Project3.dir/Tuple.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Tuple.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Tuple.cpp
 
 CMakeFiles/Project3.dir/Tuple.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Tuple.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project4/CLION/Tuple.cpp > CMakeFiles/Project3.dir/Tuple.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Tuple.cpp > CMakeFiles/Project3.dir/Tuple.cpp.i
 
 CMakeFiles/Project3.dir/Tuple.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Tuple.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project4/CLION/Tuple.cpp -o CMakeFiles/Project3.dir/Tuple.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Tuple.cpp -o CMakeFiles/Project3.dir/Tuple.cpp.s
+
+CMakeFiles/Project3.dir/Graph.cpp.o: CMakeFiles/Project3.dir/flags.make
+CMakeFiles/Project3.dir/Graph.cpp.o: ../Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Project3.dir/Graph.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Project3.dir/Graph.cpp.o -c /users/guest/j/jclar234/CS236/Project5/CLION/Graph.cpp
+
+CMakeFiles/Project3.dir/Graph.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project3.dir/Graph.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /users/guest/j/jclar234/CS236/Project5/CLION/Graph.cpp > CMakeFiles/Project3.dir/Graph.cpp.i
+
+CMakeFiles/Project3.dir/Graph.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project3.dir/Graph.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /users/guest/j/jclar234/CS236/Project5/CLION/Graph.cpp -o CMakeFiles/Project3.dir/Graph.cpp.s
 
 # Object files for target Project3
 Project3_OBJECTS = \
@@ -296,7 +309,8 @@ Project3_OBJECTS = \
 "CMakeFiles/Project3.dir/Rule.cpp.o" \
 "CMakeFiles/Project3.dir/StringAutomaton.cpp.o" \
 "CMakeFiles/Project3.dir/Token.cpp.o" \
-"CMakeFiles/Project3.dir/Tuple.cpp.o"
+"CMakeFiles/Project3.dir/Tuple.cpp.o" \
+"CMakeFiles/Project3.dir/Graph.cpp.o"
 
 # External object files for target Project3
 Project3_EXTERNAL_OBJECTS =
@@ -318,9 +332,10 @@ Project3: CMakeFiles/Project3.dir/Rule.cpp.o
 Project3: CMakeFiles/Project3.dir/StringAutomaton.cpp.o
 Project3: CMakeFiles/Project3.dir/Token.cpp.o
 Project3: CMakeFiles/Project3.dir/Tuple.cpp.o
+Project3: CMakeFiles/Project3.dir/Graph.cpp.o
 Project3: CMakeFiles/Project3.dir/build.make
 Project3: CMakeFiles/Project3.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable Project3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Linking CXX executable Project3"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Project3.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -333,6 +348,6 @@ CMakeFiles/Project3.dir/clean:
 .PHONY : CMakeFiles/Project3.dir/clean
 
 CMakeFiles/Project3.dir/depend:
-	cd /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /users/guest/j/jclar234/CS236/Project4/CLION /users/guest/j/jclar234/CS236/Project4/CLION /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles/Project3.dir/DependInfo.cmake --color=$(COLOR)
+	cd /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /users/guest/j/jclar234/CS236/Project5/CLION /users/guest/j/jclar234/CS236/Project5/CLION /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles/Project3.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Project3.dir/depend
 

@@ -32,6 +32,29 @@ void Interpreter::Run() {
         database->GetMapElement((*it)->GetName())->AddTuple(newTuple);
     }
 
+    /*
+     * TODO List of Stuff
+     *      1 - Create the graph class
+     *      2 - Run the strongly connected component algorithm to get sets of the strongly connected components
+     *      3 - Evaluate the rules in order of the strongly connected components found
+     */
+    Graph* graph = new Graph(program->GetRuleVector(), false);
+    Graph* reverseGraph = new Graph(program->GetRuleVector(), true);
+    std::cout << graph->toString() << std::endl;
+    std::cout << std::endl << std::endl;
+    std::cout << reverseGraph->toString() << std::endl;
+    /* TODO (2) Figure out the strongly connected components of the rules
+     *      2.1 Create the graph of the rules G
+     *      2.2 Create the reverse graph Gr of G
+     *      2.3 Run DFSF on Gr and record the postorder of the nodes
+     *      2.4 Reverse the postorder
+     *      2.5 Run DFSF on G using the reversed postorder
+    */
+
+    /*
+     * TODO (3) Evaluate the rules in order of the strongly connected components found
+     *      NOTE Trivial node that doesn't depend on itself should only have one pass
+     */
     std::cout << "Rule Evaluation" << std::endl;
     bool tupleAdded = false;
     int numberOfPasses = 0;

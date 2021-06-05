@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /users/guest/j/jclar234/CS236/Project4/CLION
+CMAKE_SOURCE_DIR = /users/guest/j/jclar234/CS236/Project5/CLION
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo
+CMAKE_BINARY_DIR = /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /users/guest/j/jclar234/CS236/Project4/CLION/cmake-build-debug-schizo/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /users/guest/j/jclar234/CS236/Project5/CLION/cmake-build-debug-schizo/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -203,6 +203,33 @@ DatalogProgram.s: DatalogProgram.cpp.s
 DatalogProgram.cpp.s:
 	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/DatalogProgram.cpp.s
 .PHONY : DatalogProgram.cpp.s
+
+Graph.o: Graph.cpp.o
+
+.PHONY : Graph.o
+
+# target to build an object file
+Graph.cpp.o:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/Graph.cpp.o
+.PHONY : Graph.cpp.o
+
+Graph.i: Graph.cpp.i
+
+.PHONY : Graph.i
+
+# target to preprocess a source file
+Graph.cpp.i:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/Graph.cpp.i
+.PHONY : Graph.cpp.i
+
+Graph.s: Graph.cpp.s
+
+.PHONY : Graph.s
+
+# target to generate assembly for a file
+Graph.cpp.s:
+	$(MAKE) -f CMakeFiles/Project3.dir/build.make CMakeFiles/Project3.dir/Graph.cpp.s
+.PHONY : Graph.cpp.s
 
 Header.o: Header.cpp.o
 
@@ -600,6 +627,9 @@ help:
 	@echo "... DatalogProgram.o"
 	@echo "... DatalogProgram.i"
 	@echo "... DatalogProgram.s"
+	@echo "... Graph.o"
+	@echo "... Graph.i"
+	@echo "... Graph.s"
 	@echo "... Header.o"
 	@echo "... Header.i"
 	@echo "... Header.s"

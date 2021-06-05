@@ -1,0 +1,21 @@
+Schemes:
+fv(F,V)
+vb(V,B)
+bf(B,F)
+bfc(B,F,C)
+cd(C,D)
+Facts:
+fv('banana','celery').
+fv('apple','artichoke').
+fv('mango','broccoli').
+vb('celery','italian bread').
+vb('carrot','american bread').
+vb('broccoli','bad bread').
+cd('Cat1','Dog1').
+cd('Cat2','Dog2').
+bfc('italian bread','banana','cat1').
+bfc('bread2','fruit2','cat2').
+Rules:bf(gb,gf):-fv(gf,gv),vb(gv,gb).
+
+Queries:
+fv(X,Y)?
