@@ -17,10 +17,10 @@ private:
     std::map<int, bool> nodeVisited;
 public:
     Graph(std::vector<Rule*>* ruleVector, bool reversed);
-    void DepthFirstSearch();
-    void DepthFirstSearchHelper();
+    void DepthFirstSearch(int vertex, std::stack<int>* postOrder);
+    void DepthFirstSearch(int vertex, std::set<int>* newTree);
     std::stack<int>* DepthFirstSearchForest();
-    std::vector<std::set<int>*>* DepthFirstSearchForestSCC();
+    std::vector<std::set<int>*>* DepthFirstSearchForestSCC(std::stack<int>* postOrder);
     std::string toString();
     // TODO (1) Create Graph class
     /* Adjacency list implementation

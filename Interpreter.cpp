@@ -41,8 +41,10 @@ void Interpreter::Run() {
     Graph* graph = new Graph(program->GetRuleVector(), false);
     Graph* reverseGraph = new Graph(program->GetRuleVector(), true);
     std::cout << graph->toString() << std::endl;
-    std::cout << std::endl << std::endl;
-    std::cout << reverseGraph->toString() << std::endl;
+    // TODO remember to delete these
+    std::stack<int>* postOrder = reverseGraph->DepthFirstSearchForest();
+    std::vector<std::set<int>*>* forest = graph->DepthFirstSearchForestSCC(postOrder);
+    std::cout << "Hello";
     /* TODO (2) Figure out the strongly connected components of the rules
      *      2.1 Create the graph of the rules G
      *      2.2 Create the reverse graph Gr of G

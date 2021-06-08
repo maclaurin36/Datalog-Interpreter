@@ -51,10 +51,59 @@ std::string Graph::toString() {
     return ss.str();
 }
 
-void Graph::DepthFirstSearch() {
-
+void Graph::DepthFirstSearch(int vertex, std::stack<int>* postOrder) {
+    std::set<int> vertexEdges = edges.at(vertex);
+    nodeVisited.at(vertex) = true;
+    for (auto edgeIt = vertexEdges.begin(); edgeIt != vertexEdges.end(); edgeIt++) {
+        if (!nodeVisited.at(*edgeIt)) {
+            DepthFirstSearch((*edgeIt), postOrder);
+        }
+    }
+    postOrder->push(vertex);
 }
 
-void Graph::DepthFirstSearchHelper() {
+void Graph::DepthFirstSearch(int vertex, std::set<int> *newTree) {
+    std::set<int> vertexEdges = edges.at(vertex);
+    nodeVisited.at(vertex) = true;
+    for (auto edgeIt = vertexEdges.begin(); edgeIt != vertexEdges.end(); edgeIt++) {
+        if (!nodeVisited.at(*edgeIt)) {
+            DepthFirstSearch((*edgeIt), newTree);
+        }
+    }
+    newTree->insert(vertex);
+}
 
+std::stack<int>* Graph::DepthFirstSearchForest() {
+    for (auto it = nodeVisited.begin(); it != nodeVisited.end(); it++) {
+        nodeVisited.at((*it).first) = false;
+    }
+
+    std::stack<int>* postOrder = new std::stack<int>;
+
+    for (auto it = edges.begin(); it != edges.end(); it++) {
+        if (!nodeVisited.at((*it).first)) {
+            DepthFirstSearch((*it).first, postOrder);
+        }
+    }
+
+    return postOrder;
+}
+
+std::vector<std::set<int> *> *Graph::DepthFirstSearchForestSCC(std::stack<int>* postOrder) {
+    std::vector<std::set<int>*>* treeVector = new std::vector<std::set<int>*>;
+
+    for (auto it = nodeVisited.begin(); it != nodeVisited.end(); it++) {
+        nodeVisited.at((*it).first) = false;
+    }
+
+    while (!postOrder->empty()) {
+        if (!nodeVisited.at(postOrder->top())) {
+            std::set<int>* tree = new std::set<int>;
+            DepthFirstSearch(postOrder->top(), tree);
+            treeVector->push_back(tree);
+        }
+        postOrder->pop();
+    }
+
+    return treeVector;
 }
