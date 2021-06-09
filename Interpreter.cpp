@@ -132,8 +132,7 @@ Relation *Interpreter::EvaluatePredicate(Predicate &p) {
 
     /// Project and rename if there are variables
     if (listOfNames.size() > 0) {
-        Relation* deleteRelation;
-        deleteRelation = returnRelation;
+        Relation* deleteRelation = returnRelation;
         returnRelation = returnRelation->Project(&listOfIndices);
         delete deleteRelation;
         returnRelation->Rename(returnRelation, &listOfNames);
@@ -167,7 +166,7 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
 }
 
 void Interpreter::EvaluateSCC(std::set<int>* SCC, bool isTrivial) {
-    /*std::cout << "SCC: ";
+    std::cout << "SCC: ";
     OutputSCCNodes(SCC);
     std::cout << std::endl;
     std::vector<Rule*>* ruleVector = program->GetRuleVector();
@@ -228,7 +227,7 @@ void Interpreter::EvaluateSCC(std::set<int>* SCC, bool isTrivial) {
     std::cout << numberOfPasses << " passes: ";
     OutputSCCNodes(SCC);
     std::cout << std::endl;
-     */
+
 }
 
 void Interpreter::OutputSCCNodes(std::set<int> *SCC) {
