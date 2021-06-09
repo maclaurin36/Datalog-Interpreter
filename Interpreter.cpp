@@ -190,8 +190,8 @@ void Interpreter::EvaluateSCC(std::set<int>* SCC, bool isTrivial) {
                 joiningRelation = joiningRelation->Join(relationList.at(j));
                 delete deleteRelation;
             }
-            if (relationList.size() > 1) {
-                delete relationList.at(1);
+            for (unsigned int j = 1; j < relationList.size(); j++) {
+                delete relationList.at(j);
             }
             // 3) Project the columns that appear in the head predicate (in head predicate order)
             {
