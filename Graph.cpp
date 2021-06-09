@@ -6,7 +6,6 @@
 
 Graph::Graph(std::vector<Rule *> *ruleVector, bool reversed) {
     for (unsigned int i = 0; i < ruleVector->size(); i++) {
-        Rule *currentRule = ruleVector->at(i);
         edges.insert(std::pair<int, std::set<int>>(i, std::set<int>()));
         nodeVisited.insert(std::pair<int, bool>(i, false));
     }
