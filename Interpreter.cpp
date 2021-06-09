@@ -32,31 +32,16 @@ void Interpreter::Run() {
         database->GetMapElement((*it)->GetName())->AddTuple(newTuple);
     }
 
-    /*
-     * TODO List of Stuff
-     *      1 - Create the graph class
-     *      2 - Run the strongly connected component algorithm to get sets of the strongly connected components
-     *      3 - Evaluate the rules in order of the strongly connected components found
-     */
+    // Create the graph and reverse graph of the relations
     Graph* graph = new Graph(program->GetRuleVector(), false);
     Graph* reverseGraph = new Graph(program->GetRuleVector(), true);
     std::cout << "Dependency Graph" << std::endl;
     std::cout << graph->toString() << std::endl;
     // TODO remember to delete these
+    // Find the post order and strongly connected components
     std::stack<int>* postOrder = reverseGraph->DepthFirstSearchForest();
     std::vector<std::set<int>*>* SCCVector = graph->DepthFirstSearchForestSCC(postOrder);
-    /* TODO (2) Figure out the strongly connected components of the rules
-     *      2.1 Create the graph of the rules G
-     *      2.2 Create the reverse graph Gr of G
-     *      2.3 Run DFSF on Gr and record the postorder of the nodes
-     *      2.4 Reverse the postorder
-     *      2.5 Run DFSF on G using the reversed postorder
-    */
-
-    /*
-     * TODO (3) Evaluate the rules in order of the strongly connected components found
-     *      NOTE Trivial node that doesn't depend on itself should only have one pass
-     */
+    // Evaluate the rules in order of strongly connected components with one pass for trivial nodes
     std::cout << std::endl;
     std::cout << "Rule Evaluation" << std::endl;
     for (unsigned int i = 0; i < SCCVector->size(); i++) {
@@ -66,60 +51,10 @@ void Interpreter::Run() {
             isTrivial = graph->IsTrivial((*it));
         }
         EvaluateSCC(SCCVector->at(i), isTrivial);
+        delete SCCVector->at(i);
     }
-    /*bool tupleAdded = false;
-    int numberOfPasses = 0;
-    do {
-        tupleAdded = false;
-        // Evaluate rules here (order of the input file)
-        std::vector<Rule*>* ruleVector = program->GetRuleVector();
-        for (unsigned int i = 0; i < ruleVector->size(); i++) {
-            // 1) Evaluate the predicates on the right-hand side of the rule (same as queries)
-            Rule* currentRule = ruleVector->at(i);
-            std::cout << currentRule->toString() << std::endl;
-            std::vector<Predicate*> predicateList = currentRule->GetPredicateList(); // by reference
-            std::vector<Relation*> relationList;
-            for (unsigned int j = 0; j < predicateList.size(); j++) {
-                relationList.push_back(EvaluatePredicate(*predicateList.at(j)));
-            }
-            // 2) Join the relations that result
-            Relation* joiningRelation = relationList.at(0);
-            for (unsigned int j = 1; j < relationList.size(); j++) {
-                Relation* deleteRelation = joiningRelation;
-                joiningRelation = joiningRelation->Join(relationList.at(j));
-                delete deleteRelation;
-            }
-            // 3) Project the columns that appear in the head predicate (in head predicate order)
-            {
-                std::vector<int> listOfIndices;
-                for (unsigned int j = 0; j < currentRule->GetHeadPredicate()->getList().size(); j++) {
-                    for (unsigned int k = 0; k < joiningRelation->GetHeader()->GetAttributes().size(); k++) {
-                        if (currentRule->GetHeadPredicate()->getList().at(j)->getParameterValue() == joiningRelation->GetHeader()->GetAttributes().at(k)) {
-                            listOfIndices.push_back(k);
-                        }
-                    }
-                }
-                Relation *deleteRelation = joiningRelation;
-                joiningRelation = joiningRelation->Project(&listOfIndices);
-                delete deleteRelation;
-            }
-            // 4) Rename the relation to make it union compatible with the scheme in the database (look for the scheme with the same name as the rule)
-            Relation* databaseRelation = database->GetMapElement(currentRule->GetHeadPredicate()->GetName());
-            joiningRelation->Rename(joiningRelation, &databaseRelation->GetHeader()->GetAttributes());
-            // 5) Union with the relation in the database (same name) - modifies database
-            bool potentialTupleAdded = false;
-            potentialTupleAdded = databaseRelation->Union(joiningRelation);
-            if (!tupleAdded) {
-                tupleAdded = potentialTupleAdded;
-            }
-            delete joiningRelation;
-            // If new tuples were added restart (use set.insert(myTuple).second which returns a boolean value if the tuple was new), pass through all rules
-        }
-        numberOfPasses++;
-    } while (tupleAdded);
-
-    std::cout << std::endl << "Schemes populated after " << numberOfPasses << " passes through the Rules." << std::endl << std::endl;
-    */
+    delete postOrder;
+    delete SCCVector;
     std::cout << std::endl << "Query Evaluation" << std::endl;
     // For each query
     //      get the relation with the same name as the query

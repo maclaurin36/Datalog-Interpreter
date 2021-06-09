@@ -23,15 +23,6 @@ public:
     std::vector<std::set<int>*>* DepthFirstSearchForestSCC(std::stack<int>* postOrder);
     std::string toString();
     bool IsTrivial(int nodeIdentifier);
-    // TODO (1) Create Graph class
-    /* Adjacency list implementation
-     * Graph stores all of the edges/adjacencies in a map<int nodeIdentifier, set<int> neighbors>
-     * Each node should also have a boolean visited flag map<int nodeIdentifier, boolean visited>
-     * dfs, dfsForest, (reversePostOrder shouldn't need to be done if use stack when creating postorder), push opposite edge on reverse graph instead of creating reverse graph
-     * Two dfsForest functions (one for post-order, one for SCCs)
-     * toString() should have each rule and its dependencies (even if rule doesn't have dependencies)
-     * Note the identifier should be an int so that we print out the identifiers in the correct order
-     */
 };
 
 
