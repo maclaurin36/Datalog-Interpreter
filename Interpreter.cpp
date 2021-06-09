@@ -55,6 +55,8 @@ void Interpreter::Run() {
     }
     delete postOrder;
     delete SCCVector;
+    delete graph;
+    delete reverseGraph;
     std::cout << std::endl << "Query Evaluation" << std::endl;
     // For each query
     //      get the relation with the same name as the query
