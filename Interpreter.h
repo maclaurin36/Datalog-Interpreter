@@ -20,6 +20,8 @@ public:
     void Run();
     Relation* EvaluatePredicate(Predicate& p);
     std::string QueryResultToString(Predicate* query, Relation* relation);
+    void EvaluateSCC(std::set<int>* SCC, bool isTrivial);
+    void OutputSCCNodes(std::set<int>* SCC);
 };
 
 

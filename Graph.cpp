@@ -107,3 +107,11 @@ std::vector<std::set<int> *> *Graph::DepthFirstSearchForestSCC(std::stack<int>* 
 
     return treeVector;
 }
+
+bool Graph::IsTrivial(int nodeIdentifier) {
+    if (edges.at(nodeIdentifier).find(nodeIdentifier) != edges.at(nodeIdentifier).end()) {
+        return false;
+    } else {
+        return true;
+    }
+}

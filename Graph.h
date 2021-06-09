@@ -22,6 +22,7 @@ public:
     std::stack<int>* DepthFirstSearchForest();
     std::vector<std::set<int>*>* DepthFirstSearchForestSCC(std::stack<int>* postOrder);
     std::string toString();
+    bool IsTrivial(int nodeIdentifier);
     // TODO (1) Create Graph class
     /* Adjacency list implementation
      * Graph stores all of the edges/adjacencies in a map<int nodeIdentifier, set<int> neighbors>

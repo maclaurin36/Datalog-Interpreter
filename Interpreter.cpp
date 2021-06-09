@@ -40,11 +40,11 @@ void Interpreter::Run() {
      */
     Graph* graph = new Graph(program->GetRuleVector(), false);
     Graph* reverseGraph = new Graph(program->GetRuleVector(), true);
+    std::cout << "Dependency Graph" << std::endl;
     std::cout << graph->toString() << std::endl;
     // TODO remember to delete these
     std::stack<int>* postOrder = reverseGraph->DepthFirstSearchForest();
-    std::vector<std::set<int>*>* forest = graph->DepthFirstSearchForestSCC(postOrder);
-    std::cout << "Hello";
+    std::vector<std::set<int>*>* SCCVector = graph->DepthFirstSearchForestSCC(postOrder);
     /* TODO (2) Figure out the strongly connected components of the rules
      *      2.1 Create the graph of the rules G
      *      2.2 Create the reverse graph Gr of G
@@ -57,8 +57,17 @@ void Interpreter::Run() {
      * TODO (3) Evaluate the rules in order of the strongly connected components found
      *      NOTE Trivial node that doesn't depend on itself should only have one pass
      */
+    std::cout << std::endl;
     std::cout << "Rule Evaluation" << std::endl;
-    bool tupleAdded = false;
+    for (unsigned int i = 0; i < SCCVector->size(); i++) {
+        bool isTrivial = false;
+        if (SCCVector->at(i)->size() == 1) {
+            auto it = SCCVector->at(i)->begin();
+            isTrivial = graph->IsTrivial((*it));
+        }
+        EvaluateSCC(SCCVector->at(i), isTrivial);
+    }
+    /*bool tupleAdded = false;
     int numberOfPasses = 0;
     do {
         tupleAdded = false;
@@ -110,8 +119,8 @@ void Interpreter::Run() {
     } while (tupleAdded);
 
     std::cout << std::endl << "Schemes populated after " << numberOfPasses << " passes through the Rules." << std::endl << std::endl;
-
-    std::cout << "Query Evaluation" << std::endl;
+    */
+    std::cout << std::endl << "Query Evaluation" << std::endl;
     // For each query
     //      get the relation with the same name as the query
     //      select for each constant in the query
@@ -214,4 +223,79 @@ std::string Interpreter::QueryResultToString(Predicate *query, Relation *relatio
         ss << "No";
     }
     return ss.str();
+}
+
+void Interpreter::EvaluateSCC(std::set<int>* SCC, bool isTrivial) {
+    std::cout << "SCC: ";
+    OutputSCCNodes(SCC);
+    std::cout << std::endl;
+    std::vector<Rule*>* ruleVector = program->GetRuleVector();
+    bool tupleAdded = false;
+    int numberOfPasses = 0;
+    do {
+        bool currentRoundTupleAdded = false;
+        for (auto ruleIt = SCC->begin(); ruleIt != SCC->end(); ruleIt++) {
+            // 1) Evaluate the predicates on the right-hand side of the rule (same as queries)
+            Rule *currentRule = ruleVector->at((*ruleIt));
+            std::cout << currentRule->toString() << std::endl;
+            std::vector<Predicate *> predicateList = currentRule->GetPredicateList(); // by reference
+            std::vector<Relation *> relationList;
+            for (unsigned int j = 0; j < predicateList.size(); j++) {
+                relationList.push_back(EvaluatePredicate(*predicateList.at(j)));
+            }
+            // 2) Join the relations that result
+            Relation *joiningRelation = relationList.at(0);
+            for (unsigned int j = 1; j < relationList.size(); j++) {
+                Relation *deleteRelation = joiningRelation;
+                joiningRelation = joiningRelation->Join(relationList.at(j));
+                delete deleteRelation;
+            }
+            // 3) Project the columns that appear in the head predicate (in head predicate order)
+            {
+                std::vector<int> listOfIndices;
+                for (unsigned int j = 0; j < currentRule->GetHeadPredicate()->getList().size(); j++) {
+                    for (unsigned int k = 0; k < joiningRelation->GetHeader()->GetAttributes().size(); k++) {
+                        if (currentRule->GetHeadPredicate()->getList().at(j)->getParameterValue() ==
+                            joiningRelation->GetHeader()->GetAttributes().at(k)) {
+                            listOfIndices.push_back(k);
+                        }
+                    }
+                }
+                Relation *deleteRelation = joiningRelation;
+                joiningRelation = joiningRelation->Project(&listOfIndices);
+                delete deleteRelation;
+            }
+            // 4) Rename the relation to make it union compatible with the scheme in the database (look for the scheme with the same name as the rule)
+            Relation *databaseRelation = database->GetMapElement(currentRule->GetHeadPredicate()->GetName());
+            joiningRelation->Rename(joiningRelation, &databaseRelation->GetHeader()->GetAttributes());
+            // 5) Union with the relation in the database (same name) - modifies database
+            bool potentialTupleAdded = false;
+            potentialTupleAdded = databaseRelation->Union(joiningRelation);
+            if (!currentRoundTupleAdded) {
+                currentRoundTupleAdded = potentialTupleAdded;
+            }
+            delete joiningRelation;
+            // If new tuples were added restart (use set.insert(myTuple).second which returns a boolean value if the tuple was new), pass through all rules
+        }
+        numberOfPasses++;
+        if (currentRoundTupleAdded) {
+            tupleAdded = true;
+        } else {
+            tupleAdded = false;
+        }
+    } while (tupleAdded && !isTrivial);
+    std::cout << numberOfPasses << " passes: ";
+    OutputSCCNodes(SCC);
+    std::cout << std::endl;
+}
+
+void Interpreter::OutputSCCNodes(std::set<int> *SCC) {
+    bool first = true;
+    for (auto it = SCC->begin(); it != SCC->end(); it++) {
+        if (!first) {
+            std::cout << ",";
+        }
+        first = false;
+        std::cout << "R" << (*it);
+    }
 }
