@@ -51,8 +51,12 @@ void Interpreter::Run() {
             isTrivial = graph->IsTrivial((*it));
         }
         EvaluateSCC(SCCVector->at(i), isTrivial);
+        //delete SCCVector->at(i);
+    }
+    for (unsigned int i = 0; i < SCCVector->size(); i++) {
         delete SCCVector->at(i);
     }
+
     delete postOrder;
     delete SCCVector;
     delete graph;
